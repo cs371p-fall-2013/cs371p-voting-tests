@@ -1,31 +1,31 @@
 Running main() from gtest_main.cc
-[==========] Running 28 tests from 1 test case.
+[==========] Running 30 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 28 tests from Voting
+[----------] 30 tests from Voting
 [ RUN      ] Voting.read_ballot_1
-[       OK ] Voting.read_ballot_1 (39 ms)
+[       OK ] Voting.read_ballot_1 (40 ms)
 [ RUN      ] Voting.read_ballot_2
-[       OK ] Voting.read_ballot_2 (3 ms)
+[       OK ] Voting.read_ballot_2 (4 ms)
 [ RUN      ] Voting.read_ballot_3
-[       OK ] Voting.read_ballot_3 (5 ms)
+[       OK ] Voting.read_ballot_3 (4 ms)
 [ RUN      ] Voting.read_names_1
-[       OK ] Voting.read_names_1 (23 ms)
+[       OK ] Voting.read_names_1 (25 ms)
 [ RUN      ] Voting.read_names_2
 [       OK ] Voting.read_names_2 (7 ms)
 [ RUN      ] Voting.read_names_3
 [       OK ] Voting.read_names_3 (5 ms)
 [ RUN      ] Voting.print_1
-[       OK ] Voting.print_1 (7 ms)
+[       OK ] Voting.print_1 (8 ms)
 [ RUN      ] Voting.print_2
 [       OK ] Voting.print_2 (3 ms)
 [ RUN      ] Voting.print_3
 [       OK ] Voting.print_3 (4 ms)
 [ RUN      ] Voting.read_eval_1
-[       OK ] Voting.read_eval_1 (25 ms)
+[       OK ] Voting.read_eval_1 (30 ms)
 [ RUN      ] Voting.read_eval_2
-[       OK ] Voting.read_eval_2 (8 ms)
+[       OK ] Voting.read_eval_2 (9 ms)
 [ RUN      ] Voting.read_eval_3
-[       OK ] Voting.read_eval_3 (6 ms)
+[       OK ] Voting.read_eval_3 (7 ms)
 [ RUN      ] Voting.highest_vote_count_1
 [       OK ] Voting.highest_vote_count_1 (2 ms)
 [ RUN      ] Voting.highest_vote_count_2
@@ -33,9 +33,9 @@ Running main() from gtest_main.cc
 [ RUN      ] Voting.highest_vote_count_3
 [       OK ] Voting.highest_vote_count_3 (2 ms)
 [ RUN      ] Voting.lowest_vote_count_1
-[       OK ] Voting.lowest_vote_count_1 (2 ms)
+[       OK ] Voting.lowest_vote_count_1 (3 ms)
 [ RUN      ] Voting.lowest_vote_count_2
-[       OK ] Voting.lowest_vote_count_2 (1 ms)
+[       OK ] Voting.lowest_vote_count_2 (2 ms)
 [ RUN      ] Voting.lowest_vote_count_3
 [       OK ] Voting.lowest_vote_count_3 (2 ms)
 [ RUN      ] Voting.lowest_vote_count_4
@@ -47,19 +47,23 @@ Running main() from gtest_main.cc
 [ RUN      ] Voting.all_tied_3
 [       OK ] Voting.all_tied_3 (2 ms)
 [ RUN      ] Voting.retally_1
-[       OK ] Voting.retally_1 (16 ms)
+[       OK ] Voting.retally_1 (12 ms)
+[ RUN      ] Voting.retally_2
+[       OK ] Voting.retally_2 (8 ms)
+[ RUN      ] Voting.retally_3
+[       OK ] Voting.retally_3 (8 ms)
 [ RUN      ] Voting.solve_1
-[       OK ] Voting.solve_1 (5 ms)
+[       OK ] Voting.solve_1 (6 ms)
 [ RUN      ] Voting.solve_2
-[       OK ] Voting.solve_2 (3 ms)
+[       OK ] Voting.solve_2 (4 ms)
 [ RUN      ] Voting.solve_3
-[       OK ] Voting.solve_3 (10 ms)
+[       OK ] Voting.solve_3 (9 ms)
 [ RUN      ] Voting.solve_4
-[       OK ] Voting.solve_4 (3 ms)
+[       OK ] Voting.solve_4 (4 ms)
 [ RUN      ] Voting.solve_5
-[       OK ] Voting.solve_5 (4 ms)
-[----------] 28 tests from Voting (211 ms total)
+[       OK ] Voting.solve_5 (5 ms)
+[----------] 30 tests from Voting (237 ms total)
 
 [----------] Global test environment tear-down
-[==========] 28 tests from 1 test case ran. (238 ms total)
-[  PASSED  ] 28 tests.
+[==========] 30 tests from 1 test case ran. (266 ms total)
+[  PASSED  ] 30 tests.
