@@ -132,13 +132,15 @@ TEST(Voting, read_eval_1) {
 	int num_candidates;
 	names_t name_list;					// List of candidates
 	names_t winners;					// List of winning candidates
-	std::list<ballot_t> all_ballots;	// Holds all ballots
-	int tally[MAX_CANDIDATES];			// Vote total for each candidate, indexed by candidate number, doesn't use index 0
-	for (int i = 0; i < MAX_CANDIDATES; ++i)
-		tally[i] = 0;
+	std::list<ballot_t> all_ballots[MAX_CANDIDATES];	// Holds all ballots
+  for (int i = 0; i < MAX_CANDIDATES; ++i) {
+      all_ballots[i] = std::list<ballot_t>();
+  }
+	int tally[MAX_CANDIDATES] = {0};     // Vote total for each candidate, indexed by candidate number, doesn't use index 0
+  int num_ballots;
 
-	voting_read(r, tally, name_list, all_ballots, num_candidates);
-	winners = voting_eval(r, tally, name_list, all_ballots, num_candidates);
+  num_ballots = voting_read(r, tally, name_list, all_ballots, num_candidates);
+  winners = voting_eval(r, tally, name_list, all_ballots, num_candidates, num_ballots);
 
     ASSERT_TRUE(winners == temp);
 }
@@ -151,13 +153,15 @@ TEST(Voting, read_eval_2) {
 	int num_candidates;
 	names_t name_list;					// List of candidates
 	names_t winners;					// List of winning candidates
-	std::list<ballot_t> all_ballots;	// Holds all ballots
-	int tally[MAX_CANDIDATES];			// Vote total for each candidate, indexed by candidate number, doesn't use index 0
-	for (int i = 0; i < MAX_CANDIDATES; ++i)
-		tally[i] = 0;
+	std::list<ballot_t> all_ballots[MAX_CANDIDATES];	// Holds all ballots
+  for (int i = 0; i < MAX_CANDIDATES; ++i) {
+      all_ballots[i] = std::list<ballot_t>();
+  }
+	int tally[MAX_CANDIDATES] = {0};     // Vote total for each candidate, indexed by candidate number, doesn't use index 0
+  int num_ballots;
 
-	voting_read(r, tally, name_list, all_ballots, num_candidates);
-	winners = voting_eval(r, tally, name_list, all_ballots, num_candidates);
+  num_ballots = voting_read(r, tally, name_list, all_ballots, num_candidates);
+  winners = voting_eval(r, tally, name_list, all_ballots, num_candidates, num_ballots);
 
     ASSERT_TRUE(winners == temp);
 }
@@ -170,13 +174,15 @@ TEST(Voting, read_eval_3) {
 	int num_candidates;
 	names_t name_list;					// List of candidates
 	names_t winners;					// List of winning candidates
-	std::list<ballot_t> all_ballots;	// Holds all ballots
-	int tally[MAX_CANDIDATES];			// Vote total for each candidate, indexed by candidate number, doesn't use index 0
-	for (int i = 0; i < MAX_CANDIDATES; ++i)
-		tally[i] = 0;
+	std::list<ballot_t> all_ballots[MAX_CANDIDATES];	// Holds all ballots
+  for (int i = 0; i < MAX_CANDIDATES; ++i) {
+      all_ballots[i] = std::list<ballot_t>();
+   }
+	int tally[MAX_CANDIDATES] = {0};			// Vote total for each candidate, indexed by candidate number, doesn't use index 0
+	int num_ballots;
 
-	voting_read(r, tally, name_list, all_ballots, num_candidates);
-	winners = voting_eval(r, tally, name_list, all_ballots, num_candidates);
+	num_ballots = voting_read(r, tally, name_list, all_ballots, num_candidates);
+	winners = voting_eval(r, tally, name_list, all_ballots, num_candidates, num_ballots);
 
     ASSERT_TRUE(winners == temp);
 }
@@ -321,19 +327,47 @@ TEST(Voting, all_tied_3) {
 
 TEST(Voting, retally_1) {
 	int tally[MAX_CANDIDATES] = {0};
-	std::list<ballot_t> all_ballots;
-	all_ballots.push_back(ballot_t({3, 2, 1}));
-	all_ballots.push_back(ballot_t({1, 2, 3}));
-	all_ballots.push_back(ballot_t({1, 3, 2}));
+	std::list<ballot_t> all_ballots[MAX_CANDIDATES];
+	all_ballots[3].push_back(ballot_t({3, 2, 1}));
+	all_ballots[1].push_back(ballot_t({1, 2, 3}));
+	all_ballots[1].push_back(ballot_t({1, 3, 2}));
 	tally[1] = 4;	// This should get removed by retally
 
-	retally(tally, all_ballots);
+	retally(tally, all_ballots, 3);
 	ASSERT_TRUE(tally[0] == 0);	// Shouldn't be used, but was initialized at least
 	ASSERT_TRUE(tally[1] == 2); // Would be 6 if retally didn't wipe values
 	ASSERT_TRUE(tally[2] == 0);
 	ASSERT_TRUE(tally[3] == 1);
 }
 
+TEST(Voting, retally_2) {
+  int tally[MAX_CANDIDATES] = {0};
+  std::list<ballot_t> all_ballots[MAX_CANDIDATES];
+  all_ballots[3].push_back(ballot_t({3, 2, 1}));
+  all_ballots[1].push_back(ballot_t({1, 2, 3}));
+  all_ballots[1].push_back(ballot_t({1, 3, 2}));
+  tally[1] = -1;  // Should now ignore the size of bucket 1
+
+  retally(tally, all_ballots, 3);
+  ASSERT_TRUE(tally[0] == 0); // Shouldn't be used, but was initialized at least
+  ASSERT_TRUE(tally[1] == -1);
+  ASSERT_TRUE(tally[2] == 0);
+  ASSERT_TRUE(tally[3] == 1);
+}
+
+TEST(Voting, retally_3) {
+  int tally[MAX_CANDIDATES] = {0};
+  std::list<ballot_t> all_ballots[MAX_CANDIDATES];
+  all_ballots[2].push_back(ballot_t({2, 3, 1}));
+  all_ballots[2].push_back(ballot_t({2, 1, 3}));
+  all_ballots[2].push_back(ballot_t({2, 3, 1}));
+
+  retally(tally, all_ballots, 3);
+  ASSERT_TRUE(tally[0] == 0); // Shouldn't be used, but was initialized at least
+  ASSERT_TRUE(tally[1] == 0);
+  ASSERT_TRUE(tally[2] == 3);
+  ASSERT_TRUE(tally[3] == 0);
+}
 
 
 // ------------
