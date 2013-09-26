@@ -282,31 +282,25 @@ TEST(Voting, voting_winner_3) {
 TEST(Voting, read) {
     std::istringstream r("2\n\n");
     string result;
-    const bool b = voting_read(r, result);
-    //printf(">>>>>> %s\n", result.c_str());
-    ASSERT_TRUE(b == true);
+    voting_read(r, result);
     ASSERT_TRUE(result.compare("2") == 0);}
 
 TEST(Voting, read_2) {
     std::istringstream r("1\nJohn Doe\n1 2 3\n3 2 1\n\n");
     string result;
-    const bool b = voting_read(r, result);
-    //printf(">>>>>> %s\n", result.c_str());
-    ASSERT_TRUE(b == true);
+    voting_read(r, result);
     ASSERT_TRUE(result.compare("1\nJohn Doe\n1 2 3\n3 2 1") == 0);}
 
 TEST(Voting, read_3) {
     std::istringstream r("2\nJohn Doe\nJane Smith\n1 2 3\n3 2 1\n2 3 1\n\n");
     string result;
-    const bool b = voting_read(r, result);
-    ASSERT_TRUE(b == true);
+    voting_read(r, result);
     ASSERT_TRUE(result.compare("2\nJohn Doe\nJane Smith\n1 2 3\n3 2 1\n2 3 1") == 0);}
 
 TEST(Voting, read_4) {
     std::istringstream r("2\nJohn Doe\nJane Smith\nSirhan Sirhan\n1 2 3\n3 2 1\n2 3 1\n1 3 2\n\n");
     string result;
-    const bool b = voting_read(r, result);
-    ASSERT_TRUE(b == true);
+    voting_read(r, result);
     ASSERT_TRUE(result.compare("2\nJohn Doe\nJane Smith\nSirhan Sirhan\n1 2 3\n3 2 1\n2 3 1\n1 3 2") == 0);}
 
 // ------------
