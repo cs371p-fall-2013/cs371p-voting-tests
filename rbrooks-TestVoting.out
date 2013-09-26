@@ -1,0 +1,119 @@
+Running main() from gtest_main.cc
+[==========] Running 55 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 55 tests from Voting
+[ RUN      ] Voting.read_basic
+[       OK ] Voting.read_basic (85 ms)
+[ RUN      ] Voting.read_basic_long_name
+[       OK ] Voting.read_basic_long_name (8 ms)
+[ RUN      ] Voting.read_basic_multispace
+[       OK ] Voting.read_basic_multispace (6 ms)
+[ RUN      ] Voting.read_votes_basic
+[       OK ] Voting.read_votes_basic (9 ms)
+[ RUN      ] Voting.read_votes_basic_zero
+[       OK ] Voting.read_votes_basic_zero (8 ms)
+[ RUN      ] Voting.read_votes_basic_zero2
+[       OK ] Voting.read_votes_basic_zero2 (5 ms)
+[ RUN      ] Voting.read_votes_basic_allforOne
+[       OK ] Voting.read_votes_basic_allforOne (6 ms)
+[ RUN      ] Voting.read_votes_basic_so_many_spaces
+[       OK ] Voting.read_votes_basic_so_many_spaces (5 ms)
+[ RUN      ] Voting.read_votes_combined
+[       OK ] Voting.read_votes_combined (12 ms)
+[ RUN      ] Voting.read_votes_combined2
+[       OK ] Voting.read_votes_combined2 (12 ms)
+[ RUN      ] Voting.read_votes_eof
+[       OK ] Voting.read_votes_eof (13 ms)
+[ RUN      ] Voting.solve_one_votes
+[       OK ] Voting.solve_one_votes (10 ms)
+[ RUN      ] Voting.solve_one_votes3
+[       OK ] Voting.solve_one_votes3 (3 ms)
+[ RUN      ] Voting.solve_one_votes2
+[       OK ] Voting.solve_one_votes2 (3 ms)
+[ RUN      ] Voting.solve_zero_votes
+[       OK ] Voting.solve_zero_votes (4 ms)
+[ RUN      ] Voting.solve_tied_loser
+[       OK ] Voting.solve_tied_loser (20 ms)
+[ RUN      ] Voting.solve_tied_winner
+[       OK ] Voting.solve_tied_winner (3 ms)
+[ RUN      ] Voting.solve_tied_winner2
+[       OK ] Voting.solve_tied_winner2 (3 ms)
+[ RUN      ] Voting.Election_winnecheck
+[       OK ] Voting.Election_winnecheck (5 ms)
+[ RUN      ] Voting.Election_winnecheck2
+[       OK ] Voting.Election_winnecheck2 (4 ms)
+[ RUN      ] Voting.Election_winnecheck3
+[       OK ] Voting.Election_winnecheck3 (3 ms)
+[ RUN      ] Voting.Election_winnercheck_majority
+[       OK ] Voting.Election_winnercheck_majority (3 ms)
+[ RUN      ] Voting.Election_winnercheck_majority2
+[       OK ] Voting.Election_winnercheck_majority2 (4 ms)
+[ RUN      ] Voting.Election_winnercheck_majority3
+[       OK ] Voting.Election_winnercheck_majority3 (3 ms)
+[ RUN      ] Voting.Election_winnercheck_majority4
+[       OK ] Voting.Election_winnercheck_majority4 (4 ms)
+[ RUN      ] Voting.Election_winnercheck_one_canidate
+[       OK ] Voting.Election_winnercheck_one_canidate (4 ms)
+[ RUN      ] Voting.Election_winnercheck_one_canidate_one_vote
+[       OK ] Voting.Election_winnercheck_one_canidate_one_vote (2 ms)
+[ RUN      ] Voting.Election_winnercheck_tied
+[       OK ] Voting.Election_winnercheck_tied (3 ms)
+[ RUN      ] Voting.Election_winnercheck_tied2
+[       OK ] Voting.Election_winnercheck_tied2 (4 ms)
+[ RUN      ] Voting.Election_winnercheck_tied3
+[       OK ] Voting.Election_winnercheck_tied3 (4 ms)
+[ RUN      ] Voting.Election_winnercheck_tied4
+[       OK ] Voting.Election_winnercheck_tied4 (3 ms)
+[ RUN      ] Voting.Election_winnercheck_tied5
+[       OK ] Voting.Election_winnercheck_tied5 (4 ms)
+[ RUN      ] Voting.Election_RemoveLeastPopular
+[       OK ] Voting.Election_RemoveLeastPopular (7 ms)
+[ RUN      ] Voting.Election_RemoveLeastPopular2
+[       OK ] Voting.Election_RemoveLeastPopular2 (7 ms)
+[ RUN      ] Voting.Election_RemoveLeastPopular_tied
+[       OK ] Voting.Election_RemoveLeastPopular_tied (8 ms)
+[ RUN      ] Voting.Election_RemoveLeastPopular_tied2
+[       OK ] Voting.Election_RemoveLeastPopular_tied2 (7 ms)
+[ RUN      ] Voting.Election_RemoveLeastPopular_tied3
+[       OK ] Voting.Election_RemoveLeastPopular_tied3 (7 ms)
+[ RUN      ] Voting.Election_RemoveLeastPopular_Switchtied
+[       OK ] Voting.Election_RemoveLeastPopular_Switchtied (8 ms)
+[ RUN      ] Voting.Election_RemoveLeastPopular_Switchtied2
+[       OK ] Voting.Election_RemoveLeastPopular_Switchtied2 (7 ms)
+[ RUN      ] Voting.Election_RemoveLeastPopular_Switchtied3
+[       OK ] Voting.Election_RemoveLeastPopular_Switchtied3 (7 ms)
+[ RUN      ] Voting.Voter_constructor
+[       OK ] Voting.Voter_constructor (3 ms)
+[ RUN      ] Voting.Voter_constructorLong
+[       OK ] Voting.Voter_constructorLong (3 ms)
+[ RUN      ] Voting.Voter_constructorShort
+[       OK ] Voting.Voter_constructorShort (3 ms)
+[ RUN      ] Voting.Voter_peek
+[       OK ] Voting.Voter_peek (2 ms)
+[ RUN      ] Voting.Voter_peek2
+[       OK ] Voting.Voter_peek2 (3 ms)
+[ RUN      ] Voting.Voter_peek3
+[       OK ] Voting.Voter_peek3 (2 ms)
+[ RUN      ] Voting.Voter_pop
+[       OK ] Voting.Voter_pop (3 ms)
+[ RUN      ] Voting.Voter_pop2
+[       OK ] Voting.Voter_pop2 (3 ms)
+[ RUN      ] Voting.Voter_pop3
+[       OK ] Voting.Voter_pop3 (3 ms)
+[ RUN      ] Voting.Candidate_lost
+[       OK ] Voting.Candidate_lost (5 ms)
+[ RUN      ] Voting.Candidate_lostTie
+[       OK ] Voting.Candidate_lostTie (5 ms)
+[ RUN      ] Voting.Candidate_lostCompliment
+[       OK ] Voting.Candidate_lostCompliment (5 ms)
+[ RUN      ] Voting.Candidate_getVotesFor
+[       OK ] Voting.Candidate_getVotesFor (6 ms)
+[ RUN      ] Voting.Candidate_TieGetVotes
+[       OK ] Voting.Candidate_TieGetVotes (7 ms)
+[ RUN      ] Voting.Candidate_getVotesFor3
+[       OK ] Voting.Candidate_getVotesFor3 (7 ms)
+[----------] 55 tests from Voting (401 ms total)
+
+[----------] Global test environment tear-down
+[==========] 55 tests from 1 test case ran. (427 ms total)
+[  PASSED  ] 55 tests.

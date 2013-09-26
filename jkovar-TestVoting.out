@@ -1,0 +1,87 @@
+Running main() from gtest_main.cc
+[==========] Running 39 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 39 tests from Voting
+[ RUN      ] Voting.read_cases_1
+[       OK ] Voting.read_cases_1 (20 ms)
+[ RUN      ] Voting.read_cases_2
+[       OK ] Voting.read_cases_2 (5 ms)
+[ RUN      ] Voting.read_cases_3
+[       OK ] Voting.read_cases_3 (3 ms)
+[ RUN      ] Voting.read_cases_4
+[       OK ] Voting.read_cases_4 (4 ms)
+[ RUN      ] Voting.read_cases_5
+[       OK ] Voting.read_cases_5 (3 ms)
+[ RUN      ] Voting.read_cases_6
+[       OK ] Voting.read_cases_6 (3 ms)
+[ RUN      ] Voting.read_cases_7
+[       OK ] Voting.read_cases_7 (3 ms)
+[ RUN      ] Voting.read_cand_num_1
+[       OK ] Voting.read_cand_num_1 (3 ms)
+[ RUN      ] Voting.read_cand_num_2
+[       OK ] Voting.read_cand_num_2 (2 ms)
+[ RUN      ] Voting.read_cand_num_3
+[       OK ] Voting.read_cand_num_3 (2 ms)
+[ RUN      ] Voting.read_cand_num_4
+[       OK ] Voting.read_cand_num_4 (2 ms)
+[ RUN      ] Voting.read_cand_num_5
+[       OK ] Voting.read_cand_num_5 (2 ms)
+[ RUN      ] Voting.read_cand_num_6
+[       OK ] Voting.read_cand_num_6 (3 ms)
+[ RUN      ] Voting.read_cand_num_7
+[       OK ] Voting.read_cand_num_7 (2 ms)
+[ RUN      ] Voting.read_candidates_1
+[       OK ] Voting.read_candidates_1 (8 ms)
+[ RUN      ] Voting.read_candidates_2
+[       OK ] Voting.read_candidates_2 (2 ms)
+[ RUN      ] Voting.read_candidates_3
+[       OK ] Voting.read_candidates_3 (3 ms)
+[ RUN      ] Voting.record_votes_1
+[       OK ] Voting.record_votes_1 (8 ms)
+[ RUN      ] Voting.record_votes_2
+[       OK ] Voting.record_votes_2 (3 ms)
+[ RUN      ] Voting.record_votes_3
+[       OK ] Voting.record_votes_3 (5 ms)
+[ RUN      ] Voting.record_votes_4
+[       OK ] Voting.record_votes_4 (2 ms)
+[ RUN      ] Voting.record_votes_5
+[       OK ] Voting.record_votes_5 (2 ms)
+[ RUN      ] Voting.record_votes_6
+[       OK ] Voting.record_votes_6 (3 ms)
+[ RUN      ] Voting.record_votes_7
+[       OK ] Voting.record_votes_7 (3 ms)
+[ RUN      ] Voting.record_votes_8
+[       OK ] Voting.record_votes_8 (4 ms)
+[ RUN      ] Voting.record_votes_9
+[       OK ] Voting.record_votes_9 (3 ms)
+[ RUN      ] Voting.election_1
+[       OK ] Voting.election_1 (6 ms)
+[ RUN      ] Voting.election_2
+[       OK ] Voting.election_2 (2 ms)
+[ RUN      ] Voting.election_3
+[       OK ] Voting.election_3 (2 ms)
+[ RUN      ] Voting.election_4
+[       OK ] Voting.election_4 (3 ms)
+[ RUN      ] Voting.election_5
+[       OK ] Voting.election_5 (2 ms)
+[ RUN      ] Voting.print_1
+[       OK ] Voting.print_1 (3 ms)
+[ RUN      ] Voting.print_2
+[       OK ] Voting.print_2 (2 ms)
+[ RUN      ] Voting.print_3
+[       OK ] Voting.print_3 (3 ms)
+[ RUN      ] Voting.print_4
+[       OK ] Voting.print_4 (2 ms)
+[ RUN      ] Voting.run_1
+[       OK ] Voting.run_1 (3 ms)
+[ RUN      ] Voting.run_2
+[       OK ] Voting.run_2 (3 ms)
+[ RUN      ] Voting.run_3
+[       OK ] Voting.run_3 (3 ms)
+[ RUN      ] Voting.run_4
+[       OK ] Voting.run_4 (3 ms)
+[----------] 39 tests from Voting (152 ms total)
+
+[----------] Global test environment tear-down
+[==========] 39 tests from 1 test case ran. (178 ms total)
+[  PASSED  ] 39 tests.

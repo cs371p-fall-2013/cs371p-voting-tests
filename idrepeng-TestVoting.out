@@ -1,0 +1,19 @@
+Running main() from gtest_main.cc
+[==========] Running 5 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 5 tests from Voting
+[ RUN      ] Voting.sort_1
+[       OK ] Voting.sort_1 (89 ms)
+[ RUN      ] Voting.areAllEqual_1
+[       OK ] Voting.areAllEqual_1 (3 ms)
+[ RUN      ] Voting.areAllEqual_2
+[       OK ] Voting.areAllEqual_2 (2 ms)
+[ RUN      ] Voting.eval_1
+[       OK ] Voting.eval_1 (49 ms)
+[ RUN      ] Voting.eval_2
+[       OK ] Voting.eval_2 (42 ms)
+[----------] 5 tests from Voting (199 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test case ran. (240 ms total)
+[  PASSED  ] 5 tests.
