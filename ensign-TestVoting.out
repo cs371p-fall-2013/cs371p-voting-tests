@@ -3,39 +3,39 @@ Running main() from gtest_main.cc
 [----------] Global test environment set-up.
 [----------] 16 tests from Voting
 [ RUN      ] Voting.read_UVa_example
-[       OK ] Voting.read_UVa_example (29 ms)
+[       OK ] Voting.read_UVa_example (46 ms)
 [ RUN      ] Voting.read_strange_characters
-[       OK ] Voting.read_strange_characters (5 ms)
+[       OK ] Voting.read_strange_characters (7 ms)
 [ RUN      ] Voting.read_single_ballot
-[       OK ] Voting.read_single_ballot (6 ms)
+[       OK ] Voting.read_single_ballot (8 ms)
 [ RUN      ] Voting.read_max_candidates
-[       OK ] Voting.read_max_candidates (6 ms)
+[       OK ] Voting.read_max_candidates (9 ms)
 [ RUN      ] Voting.eval_UVa_example
-[       OK ] Voting.eval_UVa_example (33 ms)
+[       OK ] Voting.eval_UVa_example (34 ms)
 [ RUN      ] Voting.eval_tie_at_beginning
-[       OK ] Voting.eval_tie_at_beginning (11 ms)
+[       OK ] Voting.eval_tie_at_beginning (15 ms)
 [ RUN      ] Voting.eval_tie_from_quiz
-[       OK ] Voting.eval_tie_from_quiz (6 ms)
+[       OK ] Voting.eval_tie_from_quiz (11 ms)
 [ RUN      ] Voting.eval_tricky_tie
-[       OK ] Voting.eval_tricky_tie (10 ms)
+[       OK ] Voting.eval_tricky_tie (16 ms)
 [ RUN      ] Voting.eval_tricky_win
-[       OK ] Voting.eval_tricky_win (9 ms)
+[       OK ] Voting.eval_tricky_win (17 ms)
 [ RUN      ] Voting.eval_single_candidate
-[       OK ] Voting.eval_single_candidate (4 ms)
+[       OK ] Voting.eval_single_candidate (5 ms)
 [ RUN      ] Voting.print_one_test_case
-[       OK ] Voting.print_one_test_case (14 ms)
+[       OK ] Voting.print_one_test_case (19 ms)
 [ RUN      ] Voting.print_many_test_cases
 [       OK ] Voting.print_many_test_cases (5 ms)
 [ RUN      ] Voting.print_many_test_cases_with_ties
-[       OK ] Voting.print_many_test_cases_with_ties (5 ms)
+[       OK ] Voting.print_many_test_cases_with_ties (4 ms)
 [ RUN      ] Voting.solve_UVa_example
-[       OK ] Voting.solve_UVa_example (7 ms)
+[       OK ] Voting.solve_UVa_example (8 ms)
 [ RUN      ] Voting.solve_multiple_test_cases
-[       OK ] Voting.solve_multiple_test_cases (5 ms)
+[       OK ] Voting.solve_multiple_test_cases (7 ms)
 [ RUN      ] Voting.solve_multiple_test_cases_2
-[       OK ] Voting.solve_multiple_test_cases_2 (6 ms)
-[----------] 16 tests from Voting (171 ms total)
+[       OK ] Voting.solve_multiple_test_cases_2 (8 ms)
+[----------] 16 tests from Voting (232 ms total)
 
 [----------] Global test environment tear-down
-[==========] 16 tests from 1 test case ran. (198 ms total)
+[==========] 16 tests from 1 test case ran. (265 ms total)
 [  PASSED  ] 16 tests.
