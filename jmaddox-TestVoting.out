@@ -1,0 +1,63 @@
+Running main() from gtest_main.cc
+[==========] Running 27 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 27 tests from Voting
+[ RUN      ] Voting.read
+[       OK ] Voting.read (42 ms)
+[ RUN      ] Voting.read_1
+[       OK ] Voting.read_1 (16 ms)
+[ RUN      ] Voting.read_2
+[       OK ] Voting.read_2 (21 ms)
+[ RUN      ] Voting.num_ballots
+[       OK ] Voting.num_ballots (4 ms)
+[ RUN      ] Voting.num_ballots_1
+[       OK ] Voting.num_ballots_1 (4 ms)
+[ RUN      ] Voting.num_ballots_2
+[       OK ] Voting.num_ballots_2 (4 ms)
+[ RUN      ] Voting.majority
+[       OK ] Voting.majority (4 ms)
+[ RUN      ] Voting.majority_1
+[       OK ] Voting.majority_1 (3 ms)
+[ RUN      ] Voting.majority_2
+[       OK ] Voting.majority_2 (3 ms)
+[ RUN      ] Voting.num_cand
+[       OK ] Voting.num_cand (5 ms)
+[ RUN      ] Voting.num_cand1
+[       OK ] Voting.num_cand1 (4 ms)
+[ RUN      ] Voting.num_cand2
+[       OK ] Voting.num_cand2 (4 ms)
+[ RUN      ] Voting.is_tied
+[       OK ] Voting.is_tied (3 ms)
+[ RUN      ] Voting.is_tied_1
+[       OK ] Voting.is_tied_1 (3 ms)
+[ RUN      ] Voting.is_tied_2
+[       OK ] Voting.is_tied_2 (2 ms)
+[ RUN      ] Voting.find_lowest
+[       OK ] Voting.find_lowest (3 ms)
+[ RUN      ] Voting.find_lowest1
+[       OK ] Voting.find_lowest1 (2 ms)
+[ RUN      ] Voting.find_lowest2
+[       OK ] Voting.find_lowest2 (3 ms)
+[ RUN      ] Voting.voting_eval
+[       OK ] Voting.voting_eval (10 ms)
+[ RUN      ] Voting.voting_eval1
+[       OK ] Voting.voting_eval1 (12 ms)
+[ RUN      ] Voting.voting_eval2
+[       OK ] Voting.voting_eval2 (8 ms)
+[ RUN      ] Voting.reassign_losers
+[       OK ] Voting.reassign_losers (9 ms)
+[ RUN      ] Voting.reassign_losers1
+[       OK ] Voting.reassign_losers1 (10 ms)
+[ RUN      ] Voting.reassign_losers2
+[       OK ] Voting.reassign_losers2 (10 ms)
+[ RUN      ] Voting.print
+[       OK ] Voting.print (9 ms)
+[ RUN      ] Voting.print1
+[       OK ] Voting.print1 (6 ms)
+[ RUN      ] Voting.print2
+[       OK ] Voting.print2 (4 ms)
+[----------] 27 tests from Voting (232 ms total)
+
+[----------] Global test environment tear-down
+[==========] 27 tests from 1 test case ran. (276 ms total)
+[  PASSED  ] 27 tests.
