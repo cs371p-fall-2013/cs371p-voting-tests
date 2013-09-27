@@ -53,7 +53,8 @@ TEST(Voting, read_UVa_example) {
     int ballots[MAX_BALLOTS][MAX_CANDIDATES + 1];
 		string names[MAX_CANDIDATES];
 		int ballotIndex = 0;    
-    const bool b = voting_read(r, ballots, names, ballotIndex);
+    vector<int> voteTally[MAX_CANDIDATES];
+		const bool b = voting_read(r, ballots, names, ballotIndex, voteTally);
     ASSERT_TRUE(b == true);
 		ASSERT_TRUE(ballots[0][2] == 2);
 		ASSERT_TRUE(ballots[3][3] == 3);
@@ -67,7 +68,8 @@ TEST(Voting, read_strange_characters) {
     int ballots[MAX_BALLOTS][MAX_CANDIDATES + 1];
 		string names[MAX_CANDIDATES];
 		int ballotIndex = 0;    
-    const bool b = voting_read(r, ballots, names, ballotIndex);
+    vector<int> voteTally[MAX_CANDIDATES];
+    const bool b = voting_read(r, ballots, names, ballotIndex, voteTally);
     ASSERT_TRUE(b == true);
 		ASSERT_TRUE(ballots[0][2] == 2);
 		ASSERT_TRUE(ballots[3][2] == 1);
@@ -80,7 +82,8 @@ TEST(Voting, read_single_ballot) {
     int ballots[MAX_BALLOTS][MAX_CANDIDATES + 1];
 		string names[MAX_CANDIDATES];
 		int ballotIndex = 0;    
-    const bool b = voting_read(r, ballots, names, ballotIndex);
+    vector<int> voteTally[MAX_CANDIDATES];
+    const bool b = voting_read(r, ballots, names, ballotIndex, voteTally);
     ASSERT_TRUE(b == true);
 		ASSERT_TRUE(ballots[0][2] == 2);
 		ASSERT_TRUE(ballots[0][3] == 3);
@@ -94,11 +97,13 @@ TEST(Voting, read_max_candidates) {
     int ballots[MAX_BALLOTS][MAX_CANDIDATES + 1];
 		string names[MAX_CANDIDATES];
 		int ballotIndex = 0;    
-    const bool b = voting_read(r, ballots, names, ballotIndex);
+    vector<int> voteTally[MAX_CANDIDATES];
+    const bool b = voting_read(r, ballots, names, ballotIndex, voteTally);
     ASSERT_TRUE(b == true);
 		ASSERT_TRUE(ballots[0][2] == 2);
 		ASSERT_TRUE(ballots[0][3] == 3);
-    ASSERT_TRUE(names[0] == "a");
+    ASSERT_TRUE(ballots[0][20] == 20);
+		ASSERT_TRUE(names[0] == "a");
     ASSERT_TRUE(names[1] == "b");
     ASSERT_TRUE(names[19] == "t");
     ASSERT_TRUE(ballotIndex == 1);}
@@ -112,9 +117,12 @@ TEST(Voting, eval_UVa_example) {
 		int ballots[MAX_BALLOTS][MAX_CANDIDATES + 1] = 
 			{{1, 1, 2, 3},{1, 2, 1, 3},{1, 2, 3, 1},{1, 1, 2, 3},{1, 3, 1, 2}};
     int ballotIndex = 5;
-		vector<int> losers;
-		const vector<string> v = voting_eval(names, ballots, ballotIndex, losers);
-    ASSERT_TRUE(losers[0] == 3);
+		vector<int> voteTally[MAX_CANDIDATES];
+		voteTally[0] = {0, 3};
+		voteTally[1] = {1, 2};
+		voteTally[2] = {4};
+		const vector<string> v = voting_eval(names, ballots, ballotIndex, voteTally);
+    ASSERT_TRUE(voteTally[2].size() == 0);
 		ASSERT_TRUE(v[0] == "John Doe");}
 
 TEST(Voting, eval_tie_at_beginning) {
@@ -122,9 +130,12 @@ TEST(Voting, eval_tie_at_beginning) {
 		int ballots[MAX_BALLOTS][MAX_CANDIDATES + 1] = 
 			{{1, 1, 2, 3, 4},{1, 2, 1, 3, 4},{1, 3, 2, 1, 4},{1, 4, 2, 3, 1}};
     int ballotIndex = 4;
-		vector<int> losers;
-		const vector<string> v = voting_eval(names, ballots, ballotIndex, losers);
-    ASSERT_TRUE(losers.empty());
+		vector<int> voteTally[MAX_CANDIDATES];
+		voteTally[0] = {0};
+		voteTally[1] = {1};
+		voteTally[2] = {2};
+		voteTally[3] = {3};
+		const vector<string> v = voting_eval(names, ballots, ballotIndex, voteTally);
 		ASSERT_TRUE(v[0] == "Red");
 		ASSERT_TRUE(v[1] == "Green");
 		ASSERT_TRUE(v[2] == "Blue");
@@ -136,10 +147,16 @@ TEST(Voting, eval_tie_from_quiz) {
 			{{1, 1, 2, 3, 4},{1, 2, 1, 3, 4},{1, 2, 3, 1, 4},
 			 {1, 1, 2, 3, 4},{1, 3, 4, 1, 2},{1, 4, 3, 2, 1}};
     int ballotIndex = 6;
-		vector<int> losers;
-		const vector<string> v = voting_eval(names, ballots, ballotIndex, losers);
-    ASSERT_TRUE(losers[0] == 3);
-		ASSERT_TRUE(losers[1] == 4);
+		vector<int> voteTally[MAX_CANDIDATES];
+		voteTally[0] = {0, 3};
+		voteTally[1] = {1, 2};
+		voteTally[2] = {4};
+		voteTally[3] = {5};
+		const vector<string> v = voting_eval(names, ballots, ballotIndex, voteTally);
+    ASSERT_TRUE(voteTally[0].size() == 3);
+		ASSERT_TRUE(voteTally[1].size() == 3);
+		ASSERT_TRUE(voteTally[2].size() == 0);
+		ASSERT_TRUE(voteTally[3].size() == 0);
 		ASSERT_TRUE(v[0] == "Red");
 		ASSERT_TRUE(v[1] == "Green");}
 
@@ -152,12 +169,20 @@ TEST(Voting, eval_tricky_tie) {
 			 {1, 5, 4, 3, 1, 2, 6},{1, 4, 6, 2, 1, 3, 5},{1, 1, 5, 6, 4, 3, 2},
 			 {1, 6, 5, 4, 3, 1, 2}};
     int ballotIndex = 10;
-		vector<int> losers;
-		const vector<string> v = voting_eval(names, ballots, ballotIndex, losers);
-    ASSERT_TRUE(losers[0] == 3);
-		ASSERT_TRUE(losers[1] == 4);
-		ASSERT_TRUE(losers[2] == 5);
-		ASSERT_TRUE(losers[3] == 6);
+		vector<int> voteTally[MAX_CANDIDATES];
+		voteTally[0] = {0, 3, 8};
+		voteTally[1] = {1, 2, 4};
+		voteTally[2] = {5};
+		voteTally[3] = {7};
+		voteTally[4] = {6};
+		voteTally[5] = {9};
+		const vector<string> v = voting_eval(names, ballots, ballotIndex, voteTally);
+    ASSERT_TRUE(voteTally[0].size() == 5);
+		ASSERT_TRUE(voteTally[1].size() == 5);
+		ASSERT_TRUE(voteTally[2].size() == 0);
+		ASSERT_TRUE(voteTally[3].size() == 0);
+		ASSERT_TRUE(voteTally[4].size() == 0);
+		ASSERT_TRUE(voteTally[5].size() == 0);
 		ASSERT_TRUE(v[0] == "Red");
 		ASSERT_TRUE(v[1] == "Green");}
 
@@ -172,14 +197,24 @@ TEST(Voting, eval_tricky_win) {
 			 {1, 6, 5, 1, 4, 3, 2, 7, 8},{1, 7, 6, 5, 4, 3, 1, 2, 8},
 			 {1, 8, 7, 6, 5, 2, 4, 3, 1}};
     int ballotIndex = 11;
-		vector<int> losers;
-		const vector<string> v = voting_eval(names, ballots, ballotIndex, losers);
-		ASSERT_TRUE(losers[0] == 4);
-		ASSERT_TRUE(losers[1] == 5);
-		ASSERT_TRUE(losers[2] == 6);
-		ASSERT_TRUE(losers[3] == 7);
-		ASSERT_TRUE(losers[4] == 8);
-		ASSERT_TRUE(losers[5] == 1);
+		vector<int> voteTally[MAX_CANDIDATES];
+		voteTally[0] = {0, 3};
+		voteTally[1] = {1, 2};
+		voteTally[2] = {4, 5};
+		voteTally[3] = {7};
+		voteTally[4] = {6};
+		voteTally[5] = {8};
+		voteTally[6] = {9};
+		voteTally[7] = {10};
+		const vector<string> v = voting_eval(names, ballots, ballotIndex, voteTally);
+    ASSERT_TRUE(voteTally[0].size() == 0);
+		ASSERT_TRUE(voteTally[1].size() == 6);
+		ASSERT_TRUE(voteTally[2].size() == 5);
+		ASSERT_TRUE(voteTally[3].size() == 0);
+		ASSERT_TRUE(voteTally[4].size() == 0);
+		ASSERT_TRUE(voteTally[5].size() == 0);
+		ASSERT_TRUE(voteTally[6].size() == 0);
+		ASSERT_TRUE(voteTally[7].size() == 0);
 		ASSERT_TRUE(v[0] == "Green");}
 
 TEST(Voting, eval_single_candidate) {
@@ -187,8 +222,9 @@ TEST(Voting, eval_single_candidate) {
 		int ballots[MAX_BALLOTS][MAX_CANDIDATES + 1] = 
 			{{1, 1},{1, 1},{1, 1}};
     int ballotIndex = 3;
-		vector<int> losers;
-		const vector<string> v = voting_eval(names, ballots, ballotIndex, losers);
+		vector<int> voteTally[MAX_CANDIDATES];
+		voteTally[0] = {0, 1, 2};
+		const vector<string> v = voting_eval(names, ballots, ballotIndex, voteTally);
 		ASSERT_TRUE(v[0] == "a");}
 
 // -----
@@ -199,19 +235,19 @@ TEST(Voting, print_one_test_case) {
     ostringstream w;
     vector<string> result = {"John Doe"};
 		voting_print(w, result);
-    ASSERT_TRUE(w.str() == "John Doe");}
+    ASSERT_TRUE(w.str() == "John Doe\n");}
 
 TEST(Voting, print_many_test_cases) {
     ostringstream w;
     vector<string> result = {"Red","","Green"};
 		voting_print(w, result);
-    ASSERT_TRUE(w.str() == "Red\n\nGreen");}
+    ASSERT_TRUE(w.str() == "Red\n\nGreen\n");}
 
 TEST(Voting, print_many_test_cases_with_ties) {
     ostringstream w;
     vector<string> result = {"Apple","Banana","","Orange","Strawberry","Peach"};
 		voting_print(w, result);
-    ASSERT_TRUE(w.str() == "Apple\nBanana\n\nOrange\nStrawberry\nPeach");}
+    ASSERT_TRUE(w.str() == "Apple\nBanana\n\nOrange\nStrawberry\nPeach\n");}
 
 // -----
 // solve
@@ -223,7 +259,7 @@ TEST(Voting, solve_UVa_example) {
 		int numTestCases;
     voting_solve(r, w, numTestCases);
 		ASSERT_TRUE(numTestCases == 1);
-    ASSERT_TRUE(w.str() == "John Doe");}
+    ASSERT_TRUE(w.str() == "John Doe\n");}
 
 TEST(Voting, solve_multiple_test_cases) {
     istringstream r("2\n\n3\nA\nB\nC\n1 2 3\n2 1 3\n3 2 1\n\n3\nD\nE\nF\n1 2 3\n1 3 2\n 2 1 3");
@@ -231,7 +267,7 @@ TEST(Voting, solve_multiple_test_cases) {
 		int numTestCases;
     voting_solve(r, w, numTestCases);
 		ASSERT_TRUE(numTestCases == 2);
-    ASSERT_TRUE(w.str() == "A\nB\nC\n\nD");}
+    ASSERT_TRUE(w.str() == "A\nB\nC\n\nD\n");}
 
 TEST(Voting, solve_multiple_test_cases_2) {
     istringstream r("2\n\n2\nApple\nBanana\n1 2\n2 1\n\n3\nOrange\nStrawberry\nPeach\n1 2 3\n2 1 3\n2 3 1");
@@ -239,4 +275,4 @@ TEST(Voting, solve_multiple_test_cases_2) {
 		int numTestCases;
     voting_solve(r, w, numTestCases);
 		ASSERT_TRUE(numTestCases == 2);
-    ASSERT_TRUE(w.str() == "Apple\nBanana\n\nStrawberry");}
+    ASSERT_TRUE(w.str() == "Apple\nBanana\n\nStrawberry\n");}
