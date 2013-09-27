@@ -1,0 +1,77 @@
+Running main() from gtest_main.cc
+[==========] Running 28 tests from 5 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from Ballot
+[ RUN      ] Ballot.constructor
+[       OK ] Ballot.constructor (53 ms)
+[ RUN      ] Ballot.leadingCandidate
+[       OK ] Ballot.leadingCandidate (8 ms)
+[ RUN      ] Ballot.update
+[       OK ] Ballot.update (19 ms)
+[----------] 3 tests from Ballot (96 ms total)
+
+[----------] 5 tests from Candidate
+[ RUN      ] Candidate.constructor
+[       OK ] Candidate.constructor (3 ms)
+[ RUN      ] Candidate.elimination
+[       OK ] Candidate.elimination (5 ms)
+[ RUN      ] Candidate.addBallots_DumpBallots
+[       OK ] Candidate.addBallots_DumpBallots (37 ms)
+[ RUN      ] Candidate.addBallots_dumpBallots2
+[       OK ] Candidate.addBallots_dumpBallots2 (26 ms)
+[ RUN      ] Candidate.name
+[       OK ] Candidate.name (9 ms)
+[----------] 5 tests from Candidate (80 ms total)
+
+[----------] 9 tests from votingEval
+[ RUN      ] votingEval.trial1
+[       OK ] votingEval.trial1 (49 ms)
+[ RUN      ] votingEval.trial2
+[       OK ] votingEval.trial2 (12 ms)
+[ RUN      ] votingEval.trial3
+[       OK ] votingEval.trial3 (19 ms)
+[ RUN      ] votingEval.trial4
+[       OK ] votingEval.trial4 (21 ms)
+[ RUN      ] votingEval.trial5
+[       OK ] votingEval.trial5 (34 ms)
+[ RUN      ] votingEval.trial6
+[       OK ] votingEval.trial6 (65 ms)
+[ RUN      ] votingEval.trial7
+[       OK ] votingEval.trial7 (6 ms)
+[ RUN      ] votingEval.trial8
+[       OK ] votingEval.trial8 (25 ms)
+[ RUN      ] votingEval.trial9
+[       OK ] votingEval.trial9 (33 ms)
+[----------] 9 tests from votingEval (265 ms total)
+
+[----------] 3 tests from votingWrite
+[ RUN      ] votingWrite.trial1
+[       OK ] votingWrite.trial1 (14 ms)
+[ RUN      ] votingWrite.trial2
+[       OK ] votingWrite.trial2 (9 ms)
+[ RUN      ] votingWrite.trial3
+[       OK ] votingWrite.trial3 (11 ms)
+[----------] 3 tests from votingWrite (34 ms total)
+
+[----------] 8 tests from votingSolve
+[ RUN      ] votingSolve.trial1
+[       OK ] votingSolve.trial1 (25 ms)
+[ RUN      ] votingSolve.trial2
+[       OK ] votingSolve.trial2 (7 ms)
+[ RUN      ] votingSolve.trial3_aa37926
+[       OK ] votingSolve.trial3_aa37926 (183 ms)
+[ RUN      ] votingSolve.trial4_andrews
+[       OK ] votingSolve.trial4_andrews (131 ms)
+[ RUN      ] votingSolve.trial5_blimpz45
+[       OK ] votingSolve.trial5_blimpz45 (72 ms)
+[ RUN      ] votingSolve.trial7_eddies
+[       OK ] votingSolve.trial7_eddies (99 ms)
+[ RUN      ] votingSolve.trial8_jjb2796
+[       OK ] votingSolve.trial8_jjb2796 (255 ms)
+[ RUN      ] votingSolve.trial9_bdh874
+[       OK ] votingSolve.trial9_bdh874 (347 ms)
+[----------] 8 tests from votingSolve (1121 ms total)
+
+[----------] Global test environment tear-down
+[==========] 28 tests from 5 test cases ran. (1641 ms total)
+[  PASSED  ] 28 tests.
