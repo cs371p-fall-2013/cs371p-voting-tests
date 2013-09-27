@@ -3,123 +3,123 @@ Running main() from gtest_main.cc
 [----------] Global test environment set-up.
 [----------] 2 tests from VotingSolveTest
 [ RUN      ] VotingSolveTest.SingleCase
-[       OK ] VotingSolveTest.SingleCase (127 ms)
+[       OK ] VotingSolveTest.SingleCase (145 ms)
 [ RUN      ] VotingSolveTest.MultipleCases
 [       OK ] VotingSolveTest.MultipleCases (6 ms)
-[----------] 2 tests from VotingSolveTest (141 ms total)
+[----------] 2 tests from VotingSolveTest (160 ms total)
 
 [----------] 1 test from VotingHandleCaseTest
 [ RUN      ] VotingHandleCaseTest.Basic
-[       OK ] VotingHandleCaseTest.Basic (2 ms)
+[       OK ] VotingHandleCaseTest.Basic (3 ms)
 [----------] 1 test from VotingHandleCaseTest (3 ms total)
 
 [----------] 3 tests from VotingReadCandidatesTest
 [ RUN      ] VotingReadCandidatesTest.SingleCandidate
-[       OK ] VotingReadCandidatesTest.SingleCandidate (3 ms)
+[       OK ] VotingReadCandidatesTest.SingleCandidate (4 ms)
 [ RUN      ] VotingReadCandidatesTest.LongerCandidateName
 [       OK ] VotingReadCandidatesTest.LongerCandidateName (3 ms)
 [ RUN      ] VotingReadCandidatesTest.MultipleCandidates
 [       OK ] VotingReadCandidatesTest.MultipleCandidates (4 ms)
-[----------] 3 tests from VotingReadCandidatesTest (10 ms total)
+[----------] 3 tests from VotingReadCandidatesTest (12 ms total)
 
 [----------] 4 tests from VotingReadBallotsTest
 [ RUN      ] VotingReadBallotsTest.SingleBallot
-[       OK ] VotingReadBallotsTest.SingleBallot (35 ms)
+[       OK ] VotingReadBallotsTest.SingleBallot (37 ms)
 [ RUN      ] VotingReadBallotsTest.SingleVote
-[       OK ] VotingReadBallotsTest.SingleVote (6 ms)
+[       OK ] VotingReadBallotsTest.SingleVote (7 ms)
 [ RUN      ] VotingReadBallotsTest.MultipleBallots
-[       OK ] VotingReadBallotsTest.MultipleBallots (12 ms)
+[       OK ] VotingReadBallotsTest.MultipleBallots (13 ms)
 [ RUN      ] VotingReadBallotsTest.LargeNumberOfCandidates
-[       OK ] VotingReadBallotsTest.LargeNumberOfCandidates (7 ms)
-[----------] 4 tests from VotingReadBallotsTest (60 ms total)
+[       OK ] VotingReadBallotsTest.LargeNumberOfCandidates (9 ms)
+[----------] 4 tests from VotingReadBallotsTest (67 ms total)
 
 [----------] 2 tests from VotingReadSingleBallotTest
 [ RUN      ] VotingReadSingleBallotTest.SingleCandidate
 [       OK ] VotingReadSingleBallotTest.SingleCandidate (5 ms)
 [ RUN      ] VotingReadSingleBallotTest.MultipleCandidates
 [       OK ] VotingReadSingleBallotTest.MultipleCandidates (4 ms)
-[----------] 2 tests from VotingReadSingleBallotTest (9 ms total)
+[----------] 2 tests from VotingReadSingleBallotTest (10 ms total)
 
 [----------] 13 tests from VotingDetermineOutcomeTest
 [ RUN      ] VotingDetermineOutcomeTest.SingleCandidate
-[       OK ] VotingDetermineOutcomeTest.SingleCandidate (5 ms)
+[       OK ] VotingDetermineOutcomeTest.SingleCandidate (6 ms)
 [ RUN      ] VotingDetermineOutcomeTest.NoRunoff
 [       OK ] VotingDetermineOutcomeTest.NoRunoff (5 ms)
 [ RUN      ] VotingDetermineOutcomeTest.OneRunoffOneLoser
-[       OK ] VotingDetermineOutcomeTest.OneRunoffOneLoser (26 ms)
+[       OK ] VotingDetermineOutcomeTest.OneRunoffOneLoser (29 ms)
 [ RUN      ] VotingDetermineOutcomeTest.OneRunoffMultipleLosers
-[       OK ] VotingDetermineOutcomeTest.OneRunoffMultipleLosers (9 ms)
+[       OK ] VotingDetermineOutcomeTest.OneRunoffMultipleLosers (10 ms)
 [ RUN      ] VotingDetermineOutcomeTest.MultipleRunoffs
-[       OK ] VotingDetermineOutcomeTest.MultipleRunoffs (10 ms)
+[       OK ] VotingDetermineOutcomeTest.MultipleRunoffs (11 ms)
 [ RUN      ] VotingDetermineOutcomeTest.SecondChoiceCandidateIsLoser
 [       OK ] VotingDetermineOutcomeTest.SecondChoiceCandidateIsLoser (11 ms)
 [ RUN      ] VotingDetermineOutcomeTest.LaterChoiceCandidateAlsoLoser
-[       OK ] VotingDetermineOutcomeTest.LaterChoiceCandidateAlsoLoser (10 ms)
+[       OK ] VotingDetermineOutcomeTest.LaterChoiceCandidateAlsoLoser (12 ms)
 [ RUN      ] VotingDetermineOutcomeTest.TwoWayTie
 [       OK ] VotingDetermineOutcomeTest.TwoWayTie (8 ms)
 [ RUN      ] VotingDetermineOutcomeTest.MultiWayTie
 [       OK ] VotingDetermineOutcomeTest.MultiWayTie (7 ms)
 [ RUN      ] VotingDetermineOutcomeTest.TieFromRunoff
-[       OK ] VotingDetermineOutcomeTest.TieFromRunoff (6 ms)
+[       OK ] VotingDetermineOutcomeTest.TieFromRunoff (7 ms)
 [ RUN      ] VotingDetermineOutcomeTest.GuyWithNoVotes
-[       OK ] VotingDetermineOutcomeTest.GuyWithNoVotes (3 ms)
+[       OK ] VotingDetermineOutcomeTest.GuyWithNoVotes (4 ms)
 [ RUN      ] VotingDetermineOutcomeTest.TieAndGuyWithNoVotes
 [       OK ] VotingDetermineOutcomeTest.TieAndGuyWithNoVotes (4 ms)
 [ RUN      ] VotingDetermineOutcomeTest.LoserEventuallyBreaksTie
 [       OK ] VotingDetermineOutcomeTest.LoserEventuallyBreaksTie (8 ms)
-[----------] 13 tests from VotingDetermineOutcomeTest (112 ms total)
+[----------] 13 tests from VotingDetermineOutcomeTest (126 ms total)
 
-[----------] 4 tests from VotingDecideSimpleMajority
-[ RUN      ] VotingDecideSimpleMajority.AllVotes
-[       OK ] VotingDecideSimpleMajority.AllVotes (21 ms)
-[ RUN      ] VotingDecideSimpleMajority.MostVotes
-[       OK ] VotingDecideSimpleMajority.MostVotes (9 ms)
-[ RUN      ] VotingDecideSimpleMajority.HalfVotes
-[       OK ] VotingDecideSimpleMajority.HalfVotes (5 ms)
-[ RUN      ] VotingDecideSimpleMajority.FewVotes
-[       OK ] VotingDecideSimpleMajority.FewVotes (5 ms)
-[----------] 4 tests from VotingDecideSimpleMajority (42 ms total)
+[----------] 4 tests from VotingDecideSimpleMajorityTest
+[ RUN      ] VotingDecideSimpleMajorityTest.AllVotes
+[       OK ] VotingDecideSimpleMajorityTest.AllVotes (21 ms)
+[ RUN      ] VotingDecideSimpleMajorityTest.MostVotes
+[       OK ] VotingDecideSimpleMajorityTest.MostVotes (12 ms)
+[ RUN      ] VotingDecideSimpleMajorityTest.HalfVotes
+[       OK ] VotingDecideSimpleMajorityTest.HalfVotes (6 ms)
+[ RUN      ] VotingDecideSimpleMajorityTest.FewVotes
+[       OK ] VotingDecideSimpleMajorityTest.FewVotes (6 ms)
+[----------] 4 tests from VotingDecideSimpleMajorityTest (46 ms total)
 
-[----------] 3 tests from VotingFindMinMaxVotes
-[ RUN      ] VotingFindMinMaxVotes.NoZero
-[       OK ] VotingFindMinMaxVotes.NoZero (4 ms)
-[ RUN      ] VotingFindMinMaxVotes.WithZero
-[       OK ] VotingFindMinMaxVotes.WithZero (5 ms)
-[ RUN      ] VotingFindMinMaxVotes.MinMaxSame
-[       OK ] VotingFindMinMaxVotes.MinMaxSame (5 ms)
-[----------] 3 tests from VotingFindMinMaxVotes (14 ms total)
+[----------] 3 tests from VotingFindMinMaxVotesTest
+[ RUN      ] VotingFindMinMaxVotesTest.NoZero
+[       OK ] VotingFindMinMaxVotesTest.NoZero (5 ms)
+[ RUN      ] VotingFindMinMaxVotesTest.WithZero
+[       OK ] VotingFindMinMaxVotesTest.WithZero (6 ms)
+[ RUN      ] VotingFindMinMaxVotesTest.MinMaxSame
+[       OK ] VotingFindMinMaxVotesTest.MinMaxSame (5 ms)
+[----------] 3 tests from VotingFindMinMaxVotesTest (16 ms total)
 
-[----------] 2 tests from VotingDetermineTieWinners
-[ RUN      ] VotingDetermineTieWinners.TwoWayTie
-[       OK ] VotingDetermineTieWinners.TwoWayTie (5 ms)
-[ RUN      ] VotingDetermineTieWinners.MultiWayTie
-[       OK ] VotingDetermineTieWinners.MultiWayTie (4 ms)
-[----------] 2 tests from VotingDetermineTieWinners (10 ms total)
+[----------] 2 tests from VotingDetermineTieWinnersTest
+[ RUN      ] VotingDetermineTieWinnersTest.TwoWayTie
+[       OK ] VotingDetermineTieWinnersTest.TwoWayTie (4 ms)
+[ RUN      ] VotingDetermineTieWinnersTest.MultiWayTie
+[       OK ] VotingDetermineTieWinnersTest.MultiWayTie (5 ms)
+[----------] 2 tests from VotingDetermineTieWinnersTest (9 ms total)
 
-[----------] 3 tests from VotingDemoteContenders
-[ RUN      ] VotingDemoteContenders.DemoteOne
-[       OK ] VotingDemoteContenders.DemoteOne (23 ms)
-[ RUN      ] VotingDemoteContenders.DemoteMultiple
-[       OK ] VotingDemoteContenders.DemoteMultiple (17 ms)
-[ RUN      ] VotingDemoteContenders.DemoteMultipleVotingForEachOther
-[       OK ] VotingDemoteContenders.DemoteMultipleVotingForEachOther (17 ms)
-[----------] 3 tests from VotingDemoteContenders (60 ms total)
+[----------] 3 tests from VotingDemoteContendersTest
+[ RUN      ] VotingDemoteContendersTest.DemoteOne
+[       OK ] VotingDemoteContendersTest.DemoteOne (25 ms)
+[ RUN      ] VotingDemoteContendersTest.DemoteMultiple
+[       OK ] VotingDemoteContendersTest.DemoteMultiple (19 ms)
+[ RUN      ] VotingDemoteContendersTest.DemoteMultipleVotingForEachOther
+[       OK ] VotingDemoteContendersTest.DemoteMultipleVotingForEachOther (19 ms)
+[----------] 3 tests from VotingDemoteContendersTest (65 ms total)
 
-[----------] 2 tests from VotingReassignLoserBallots
-[ RUN      ] VotingReassignLoserBallots.NoLosers
-[       OK ] VotingReassignLoserBallots.NoLosers (20 ms)
-[ RUN      ] VotingReassignLoserBallots.SomeLosers
-[       OK ] VotingReassignLoserBallots.SomeLosers (19 ms)
-[----------] 2 tests from VotingReassignLoserBallots (39 ms total)
+[----------] 2 tests from VotingReassignLoserBallotsTest
+[ RUN      ] VotingReassignLoserBallotsTest.NoLosers
+[       OK ] VotingReassignLoserBallotsTest.NoLosers (23 ms)
+[ RUN      ] VotingReassignLoserBallotsTest.SomeLosers
+[       OK ] VotingReassignLoserBallotsTest.SomeLosers (21 ms)
+[----------] 2 tests from VotingReassignLoserBallotsTest (44 ms total)
 
-[----------] 3 tests from VotingWhoShouldInheritVote
-[ RUN      ] VotingWhoShouldInheritVote.HeirSecond
-[       OK ] VotingWhoShouldInheritVote.HeirSecond (3 ms)
-[ RUN      ] VotingWhoShouldInheritVote.HeirInMiddle
-[       OK ] VotingWhoShouldInheritVote.HeirInMiddle (3 ms)
-[ RUN      ] VotingWhoShouldInheritVote.HeirLast
-[       OK ] VotingWhoShouldInheritVote.HeirLast (3 ms)
-[----------] 3 tests from VotingWhoShouldInheritVote (10 ms total)
+[----------] 3 tests from VotingWhoShouldInheritVoteTest
+[ RUN      ] VotingWhoShouldInheritVoteTest.HeirSecond
+[       OK ] VotingWhoShouldInheritVoteTest.HeirSecond (4 ms)
+[ RUN      ] VotingWhoShouldInheritVoteTest.HeirInMiddle
+[       OK ] VotingWhoShouldInheritVoteTest.HeirInMiddle (4 ms)
+[ RUN      ] VotingWhoShouldInheritVoteTest.HeirLast
+[       OK ] VotingWhoShouldInheritVoteTest.HeirLast (4 ms)
+[----------] 3 tests from VotingWhoShouldInheritVoteTest (12 ms total)
 
 [----------] 1 test from VotingPrintOutcomeTest
 [ RUN      ] VotingPrintOutcomeTest.Basic
@@ -127,5 +127,5 @@ Running main() from gtest_main.cc
 [----------] 1 test from VotingPrintOutcomeTest (3 ms total)
 
 [----------] Global test environment tear-down
-[==========] 43 tests from 13 test cases ran. (543 ms total)
+[==========] 43 tests from 13 test cases ran. (605 ms total)
 [  PASSED  ] 43 tests.
