@@ -1,0 +1,39 @@
+Running main() from gtest_main.cc
+[==========] Running 15 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 15 tests from Voting
+[ RUN      ] Voting.voting_num_cases_0
+[       OK ] Voting.voting_num_cases_0 (25 ms)
+[ RUN      ] Voting.voting_num_cases_empty
+[       OK ] Voting.voting_num_cases_empty (4 ms)
+[ RUN      ] Voting.voting_num_cases_only_num
+[       OK ] Voting.voting_num_cases_only_num (4 ms)
+[ RUN      ] Voting.voting_solve_normal
+[       OK ] Voting.voting_solve_normal (145 ms)
+[ RUN      ] Voting.voting_solve_tie
+[       OK ] Voting.voting_solve_tie (11 ms)
+[ RUN      ] Voting.voting_solve_recount
+[       OK ] Voting.voting_solve_recount (33 ms)
+[ RUN      ] Voting.runElection_0
+[       OK ] Voting.runElection_0 (23 ms)
+[ RUN      ] Voting.runElection_1
+[       OK ] Voting.runElection_1 (20 ms)
+[ RUN      ] Voting.runElection_2
+[       OK ] Voting.runElection_2 (22 ms)
+[ RUN      ] Voting.ballot_getTop_0
+[       OK ] Voting.ballot_getTop_0 (10 ms)
+[ RUN      ] Voting.ballot_getTop_1
+[       OK ] Voting.ballot_getTop_1 (5 ms)
+[ RUN      ] Voting.ballot_getTop_2
+[       OK ] Voting.ballot_getTop_2 (4 ms)
+[ RUN      ] Voting.Candidate_setName_getName_0
+[       OK ] Voting.Candidate_setName_getName_0 (3 ms)
+[ RUN      ] Voting.Candidate_setName_getName_2
+[       OK ] Voting.Candidate_setName_getName_2 (3 ms)
+[ RUN      ] Voting.Candidate_setName_getName_3
+[       OK ] Voting.Candidate_setName_getName_3 (3 ms)
+[----------] 15 tests from Voting (337 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test case ran. (378 ms total)
+[  PASSED  ] 15 tests.

@@ -1,0 +1,41 @@
+Running main() from gtest_main.cc
+[==========] Running 16 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 16 tests from Voting
+[ RUN      ] Voting.read
+[       OK ] Voting.read (26 ms)
+[ RUN      ] Voting.findWinnersOrLosers
+[       OK ] Voting.findWinnersOrLosers (15 ms)
+[ RUN      ] Voting.findWinnersOrLosers_2
+[       OK ] Voting.findWinnersOrLosers_2 (4 ms)
+[ RUN      ] Voting.findWinnersOrLosers_3
+[       OK ] Voting.findWinnersOrLosers_3 (4 ms)
+[ RUN      ] Voting.findWinnersOrLosers_4
+[       OK ] Voting.findWinnersOrLosers_4 (4 ms)
+[ RUN      ] Voting.findWinnersOrLosers_5
+[       OK ] Voting.findWinnersOrLosers_5 (4 ms)
+[ RUN      ] Voting.redistributeVotes
+[       OK ] Voting.redistributeVotes (3 ms)
+[ RUN      ] Voting.redistributeVotes_2
+[       OK ] Voting.redistributeVotes_2 (2 ms)
+[ RUN      ] Voting.redistributeVotes_3
+[       OK ] Voting.redistributeVotes_3 (3 ms)
+[ RUN      ] Voting.redistributeVotes_4
+[       OK ] Voting.redistributeVotes_4 (2 ms)
+[ RUN      ] Voting.redistributeVotes_5
+[       OK ] Voting.redistributeVotes_5 (2 ms)
+[ RUN      ] Voting.runElection
+[       OK ] Voting.runElection (7 ms)
+[ RUN      ] Voting.runElection_2
+[       OK ] Voting.runElection_2 (5 ms)
+[ RUN      ] Voting.runElection_3
+[       OK ] Voting.runElection_3 (3 ms)
+[ RUN      ] Voting.runElection_4
+[       OK ] Voting.runElection_4 (2 ms)
+[ RUN      ] Voting.runElection_5
+[       OK ] Voting.runElection_5 (3 ms)
+[----------] 16 tests from Voting (99 ms total)
+
+[----------] Global test environment tear-down
+[==========] 16 tests from 1 test case ran. (126 ms total)
+[  PASSED  ] 16 tests.
