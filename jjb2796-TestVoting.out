@@ -1,0 +1,69 @@
+Running main() from gtest_main.cc
+[==========] Running 21 tests from 7 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from voting_read
+[ RUN      ] voting_read.eval_1
+[       OK ] voting_read.eval_1 (44 ms)
+[ RUN      ] voting_read.eval_2
+[       OK ] voting_read.eval_2 (6 ms)
+[ RUN      ] voting_read.eval_3
+[       OK ] voting_read.eval_3 (11 ms)
+[----------] 3 tests from voting_read (73 ms total)
+
+[----------] 3 tests from voting_print
+[ RUN      ] voting_print.print_test1
+[       OK ] voting_print.print_test1 (12 ms)
+[ RUN      ] voting_print.print_test2
+[       OK ] voting_print.print_test2 (4 ms)
+[ RUN      ] voting_print.print_test_spaces
+[       OK ] voting_print.print_test_spaces (4 ms)
+[----------] 3 tests from voting_print (22 ms total)
+
+[----------] 3 tests from find_win_loss
+[ RUN      ] find_win_loss.f_w_l_test_winner
+[       OK ] find_win_loss.f_w_l_test_winner (6 ms)
+[ RUN      ] find_win_loss.f_w_l_test_tie
+[       OK ] find_win_loss.f_w_l_test_tie (4 ms)
+[ RUN      ] find_win_loss.f_w_l_test_loser
+[       OK ] find_win_loss.f_w_l_test_loser (5 ms)
+[----------] 3 tests from find_win_loss (17 ms total)
+
+[----------] 3 tests from ballot_shift
+[ RUN      ] ballot_shift.ballot_shift_test1
+[       OK ] ballot_shift.ballot_shift_test1 (11 ms)
+[ RUN      ] ballot_shift.ballot_shift_test2
+[       OK ] ballot_shift.ballot_shift_test2 (11 ms)
+[ RUN      ] ballot_shift.ballot_shift_test3
+[       OK ] ballot_shift.ballot_shift_test3 (25 ms)
+[----------] 3 tests from ballot_shift (48 ms total)
+
+[----------] 3 tests from ballot_move
+[ RUN      ] ballot_move.ballot_move_test1
+[       OK ] ballot_move.ballot_move_test1 (18 ms)
+[ RUN      ] ballot_move.ballot_move_test2
+[       OK ] ballot_move.ballot_move_test2 (15 ms)
+[ RUN      ] ballot_move.ballot_move_test3
+[       OK ] ballot_move.ballot_move_test3 (23 ms)
+[----------] 3 tests from ballot_move (57 ms total)
+
+[----------] 3 tests from vote_reassign
+[ RUN      ] vote_reassign.vote_reassign_test1
+[       OK ] vote_reassign.vote_reassign_test1 (12 ms)
+[ RUN      ] vote_reassign.vote_reassign_test2
+[       OK ] vote_reassign.vote_reassign_test2 (10 ms)
+[ RUN      ] vote_reassign.vote_reassign_test3
+[       OK ] vote_reassign.vote_reassign_test3 (10 ms)
+[----------] 3 tests from vote_reassign (34 ms total)
+
+[----------] 3 tests from voting_eval
+[ RUN      ] voting_eval.vote_eval_test1
+[       OK ] voting_eval.vote_eval_test1 (14 ms)
+[ RUN      ] voting_eval.vote_eval_test2
+[       OK ] voting_eval.vote_eval_test2 (10 ms)
+[ RUN      ] voting_eval.vote_eval_test3
+[       OK ] voting_eval.vote_eval_test3 (11 ms)
+[----------] 3 tests from voting_eval (37 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 7 test cases ran. (335 ms total)
+[  PASSED  ] 21 tests.
