@@ -1,0 +1,60 @@
+Running main() from gtest_main.cc
+[==========] Running 24 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 9 tests from Ballot
+[ RUN      ] Ballot.checkChoice_10_candidates
+[       OK ] Ballot.checkChoice_10_candidates (25 ms)
+[ RUN      ] Ballot.checkChoice_20_candidates
+[       OK ] Ballot.checkChoice_20_candidates (2 ms)
+[ RUN      ] Ballot.checkChoice_fail_check_21
+[       OK ] Ballot.checkChoice_fail_check_21 (320 ms)
+[ RUN      ] Ballot.fromString_fail_bad_num1
+[       OK ] Ballot.fromString_fail_bad_num1 (125 ms)
+[ RUN      ] Ballot.fromString_fail_duplicate_ballot
+[       OK ] Ballot.fromString_fail_duplicate_ballot (160 ms)
+[ RUN      ] Ballot.fromString_accept_empty_with_0
+[       OK ] Ballot.fromString_accept_empty_with_0 (2 ms)
+[ RUN      ] Ballot.fromString_fail_21
+[       OK ] Ballot.fromString_fail_21 (128 ms)
+[ RUN      ] Ballot.movePosition_fail_past_end
+[       OK ] Ballot.movePosition_fail_past_end (115 ms)
+[ RUN      ] Ballot.movePosition_fail_past_20
+[       OK ] Ballot.movePosition_fail_past_20 (118 ms)
+[----------] 9 tests from Ballot (1011 ms total)
+
+[----------] 15 tests from CandidateT
+[ RUN      ] CandidateT.acceptBallot_1
+[       OK ] CandidateT.acceptBallot_1 (39 ms)
+[ RUN      ] CandidateT.acceptBallot_2
+[       OK ] CandidateT.acceptBallot_2 (3 ms)
+[ RUN      ] CandidateT.acceptBallot_3
+[       OK ] CandidateT.acceptBallot_3 (5 ms)
+[ RUN      ] CandidateT.giveUpBallot_1
+[       OK ] CandidateT.giveUpBallot_1 (6 ms)
+[ RUN      ] CandidateT.giveUpBallot_2
+[       OK ] CandidateT.giveUpBallot_2 (4 ms)
+[ RUN      ] CandidateT.giveUpBallot_3
+[       OK ] CandidateT.giveUpBallot_3 (5 ms)
+[ RUN      ] CandidateT.getVotes_1
+[       OK ] CandidateT.getVotes_1 (4 ms)
+[ RUN      ] CandidateT.getVotes_2
+[       OK ] CandidateT.getVotes_2 (3 ms)
+[ RUN      ] CandidateT.getVotes_3
+[       OK ] CandidateT.getVotes_3 (6 ms)
+[ RUN      ] CandidateT.operators_test_1
+[       OK ] CandidateT.operators_test_1 (7 ms)
+[ RUN      ] CandidateT.operators_test_2
+[       OK ] CandidateT.operators_test_2 (4 ms)
+[ RUN      ] CandidateT.operators_test_3
+[       OK ] CandidateT.operators_test_3 (4 ms)
+[ RUN      ] CandidateT.operators_test_4
+[       OK ] CandidateT.operators_test_4 (3 ms)
+[ RUN      ] CandidateT.operators_test_5
+[       OK ] CandidateT.operators_test_5 (2 ms)
+[ RUN      ] CandidateT.operators_test_6
+[       OK ] CandidateT.operators_test_6 (3 ms)
+[----------] 15 tests from CandidateT (103 ms total)
+
+[----------] Global test environment tear-down
+[==========] 24 tests from 2 test cases ran. (1148 ms total)
+[  PASSED  ] 24 tests.
