@@ -1,0 +1,39 @@
+Running main() from gtest_main.cc
+[==========] Running 15 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 15 tests from Voting
+[ RUN      ] Voting.read_1
+[       OK ] Voting.read_1 (24 ms)
+[ RUN      ] Voting.read_2
+[       OK ] Voting.read_2 (3 ms)
+[ RUN      ] Voting.read_3
+[       OK ] Voting.read_3 (4 ms)
+[ RUN      ] Voting.readBallots_1
+[       OK ] Voting.readBallots_1 (10 ms)
+[ RUN      ] Voting.readBallots_2
+[       OK ] Voting.readBallots_2 (3 ms)
+[ RUN      ] Voting.readBallots_3
+[       OK ] Voting.readBallots_3 (3 ms)
+[ RUN      ] Voting.readBallots_4
+[       OK ] Voting.readBallots_4 (3 ms)
+[ RUN      ] Voting.readBallots_5
+[       OK ] Voting.readBallots_5 (3 ms)
+[ RUN      ] Voting.readBallots_6
+[       OK ] Voting.readBallots_6 (3 ms)
+[ RUN      ] Voting.readStrings
+[       OK ] Voting.readStrings (10 ms)
+[ RUN      ] Voting.readStrings_2
+[       OK ] Voting.readStrings_2 (8 ms)
+[ RUN      ] Voting.readStrings_3
+[       OK ] Voting.readStrings_3 (5 ms)
+[ RUN      ] Voting.readStrings_4
+[       OK ] Voting.readStrings_4 (4 ms)
+[ RUN      ] Voting.readStrings_5
+[       OK ] Voting.readStrings_5 (4 ms)
+[ RUN      ] Voting.readStrings_6
+[       OK ] Voting.readStrings_6 (7 ms)
+[----------] 15 tests from Voting (111 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test case ran. (152 ms total)
+[  PASSED  ] 15 tests.

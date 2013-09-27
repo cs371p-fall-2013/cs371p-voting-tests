@@ -1,0 +1,42 @@
+Running main() from gtest_main.cc
+[==========] Running 15 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 12 tests from Voting
+[ RUN      ] Voting.tie_bug
+[       OK ] Voting.tie_bug (0 ms)
+[ RUN      ] Voting.compute_stats_2
+[       OK ] Voting.compute_stats_2 (1 ms)
+[ RUN      ] Voting.compute_stats_1
+[       OK ] Voting.compute_stats_1 (0 ms)
+[ RUN      ] Voting.compute_winners_1
+[       OK ] Voting.compute_winners_1 (0 ms)
+[ RUN      ] Voting.tally_all_3
+[       OK ] Voting.tally_all_3 (0 ms)
+[ RUN      ] Voting.tally_all_2
+[       OK ] Voting.tally_all_2 (0 ms)
+[ RUN      ] Voting.tally_all
+[       OK ] Voting.tally_all (0 ms)
+[ RUN      ] Voting.tally_candidate_3
+[       OK ] Voting.tally_candidate_3 (0 ms)
+[ RUN      ] Voting.tally_candidate_2
+[       OK ] Voting.tally_candidate_2 (0 ms)
+[ RUN      ] Voting.tally_candidate
+[       OK ] Voting.tally_candidate (0 ms)
+[ RUN      ] Voting.election_add_candidate
+[       OK ] Voting.election_add_candidate (0 ms)
+[ RUN      ] Voting.election_add_ballot
+[       OK ] Voting.election_add_ballot (0 ms)
+[----------] 12 tests from Voting (1 ms total)
+
+[----------] 3 tests from RunVoting
+[ RUN      ] RunVoting.test_parse_sample
+[       OK ] RunVoting.test_parse_sample (0 ms)
+[ RUN      ] RunVoting.test_parse_spaces_out_correctly
+[       OK ] RunVoting.test_parse_spaces_out_correctly (0 ms)
+[ RUN      ] RunVoting.test_parse_tie
+[       OK ] RunVoting.test_parse_tie (0 ms)
+[----------] 3 tests from RunVoting (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 2 test cases ran. (1 ms total)
+[  PASSED  ] 15 tests.

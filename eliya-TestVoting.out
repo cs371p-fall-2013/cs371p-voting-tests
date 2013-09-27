@@ -1,0 +1,61 @@
+Running main() from gtest_main.cc
+[==========] Running 26 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 26 tests from Voting
+[ RUN      ] Voting.read
+[       OK ] Voting.read (117 ms)
+[ RUN      ] Voting.read_2
+[       OK ] Voting.read_2 (8 ms)
+[ RUN      ] Voting.read_3
+[       OK ] Voting.read_3 (4 ms)
+[ RUN      ] Voting.calcMaxMin
+[       OK ] Voting.calcMaxMin (4 ms)
+[ RUN      ] Voting.calcMaxMin_2
+[       OK ] Voting.calcMaxMin_2 (5 ms)
+[ RUN      ] Voting.calcMaxMin_3
+[       OK ] Voting.calcMaxMin_3 (4 ms)
+[ RUN      ] Voting.calcMaxMin_4
+[       OK ] Voting.calcMaxMin_4 (4 ms)
+[ RUN      ] Voting.calcMaxMin_5
+[       OK ] Voting.calcMaxMin_5 (4 ms)
+[ RUN      ] Voting.winnerExists
+[       OK ] Voting.winnerExists (15 ms)
+[ RUN      ] Voting.winnerExists_2
+[       OK ] Voting.winnerExists_2 (8 ms)
+[ RUN      ] Voting.winnerExists_3
+[       OK ] Voting.winnerExists_3 (4 ms)
+[ RUN      ] Voting.eval
+[       OK ] Voting.eval (49 ms)
+[ RUN      ] Voting.eval_2
+[       OK ] Voting.eval_2 (5 ms)
+[ RUN      ] Voting.eval_3
+[       OK ] Voting.eval_3 (8 ms)
+[ RUN      ] Voting.sortCandidates
+[       OK ] Voting.sortCandidates (4 ms)
+[ RUN      ] Voting.sortCandidates_2
+[       OK ] Voting.sortCandidates_2 (5 ms)
+[ RUN      ] Voting.sortCandidates_3
+[       OK ] Voting.sortCandidates_3 (5 ms)
+[ RUN      ] Voting.vectorContains
+[       OK ] Voting.vectorContains (4 ms)
+[ RUN      ] Voting.vectorContains_2
+[       OK ] Voting.vectorContains_2 (4 ms)
+[ RUN      ] Voting.vectorContains_3
+[       OK ] Voting.vectorContains_3 (4 ms)
+[ RUN      ] Voting.print
+[       OK ] Voting.print (10 ms)
+[ RUN      ] Voting.print_2
+[       OK ] Voting.print_2 (6 ms)
+[ RUN      ] Voting.print_3
+[       OK ] Voting.print_3 (6 ms)
+[ RUN      ] Voting.solve
+[       OK ] Voting.solve (7 ms)
+[ RUN      ] Voting.solve_2
+[       OK ] Voting.solve_2 (5 ms)
+[ RUN      ] Voting.solve_3
+[       OK ] Voting.solve_3 (4 ms)
+[----------] 26 tests from Voting (325 ms total)
+
+[----------] Global test environment tear-down
+[==========] 26 tests from 1 test case ran. (369 ms total)
+[  PASSED  ] 26 tests.

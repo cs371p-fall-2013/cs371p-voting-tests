@@ -1,0 +1,35 @@
+Running main() from gtest_main.cc
+[==========] Running 13 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 13 tests from Voting
+[ RUN      ] Voting.read_1
+[       OK ] Voting.read_1 (150 ms)
+[ RUN      ] Voting.read_2
+[       OK ] Voting.read_2 (9 ms)
+[ RUN      ] Voting.read_3
+[       OK ] Voting.read_3 (8 ms)
+[ RUN      ] Voting.print_1
+[       OK ] Voting.print_1 (7 ms)
+[ RUN      ] Voting.print_2
+[       OK ] Voting.print_2 (5 ms)
+[ RUN      ] Voting.print_3
+[       OK ] Voting.print_3 (5 ms)
+[ RUN      ] Voting.eval_1
+[       OK ] Voting.eval_1 (7 ms)
+[ RUN      ] Voting.eval_2
+[       OK ] Voting.eval_2 (26 ms)
+[ RUN      ] Voting.eval_3
+[       OK ] Voting.eval_3 (386 ms)
+[ RUN      ] Voting.solve_1
+[       OK ] Voting.solve_1 (7 ms)
+[ RUN      ] Voting.solve_2
+[       OK ] Voting.solve_2 (5 ms)
+[ RUN      ] Voting.solve_3
+[       OK ] Voting.solve_3 (385 ms)
+[ RUN      ] Voting.solve_4
+[       OK ] Voting.solve_4 (5 ms)
+[----------] 13 tests from Voting (1020 ms total)
+
+[----------] Global test environment tear-down
+[==========] 13 tests from 1 test case ran. (1063 ms total)
+[  PASSED  ] 13 tests.
