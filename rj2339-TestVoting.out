@@ -1,0 +1,84 @@
+Running main() from gtest_main.cc
+[==========] Running 36 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 7 tests from Candidate
+[ RUN      ] Candidate.initialize
+[       OK ] Candidate.initialize (22 ms)
+[ RUN      ] Candidate.push_front_1
+[       OK ] Candidate.push_front_1 (48 ms)
+[ RUN      ] Candidate.push_front_2
+[       OK ] Candidate.push_front_2 (7 ms)
+[ RUN      ] Candidate.push_front_3
+[       OK ] Candidate.push_front_3 (9 ms)
+[ RUN      ] Candidate.clear_ballots_1
+[       OK ] Candidate.clear_ballots_1 (12 ms)
+[ RUN      ] Candidate.clear_ballots_2
+[       OK ] Candidate.clear_ballots_2 (4 ms)
+[ RUN      ] Candidate.clear_ballots_3
+[       OK ] Candidate.clear_ballots_3 (7 ms)
+[----------] 7 tests from Candidate (124 ms total)
+
+[----------] 29 tests from Voting
+[ RUN      ] Voting.initialize_candidates_1
+[       OK ] Voting.initialize_candidates_1 (9 ms)
+[ RUN      ] Voting.initialize_candidates_2
+[       OK ] Voting.initialize_candidates_2 (8 ms)
+[ RUN      ] Voting.initialize_candidates_3
+[       OK ] Voting.initialize_candidates_3 (13 ms)
+[ RUN      ] Voting.find_winners_none
+[       OK ] Voting.find_winners_none (6 ms)
+[ RUN      ] Voting.find_winners_tie_1
+[       OK ] Voting.find_winners_tie_1 (8 ms)
+[ RUN      ] Voting.find_winners_tie_2
+[       OK ] Voting.find_winners_tie_2 (7 ms)
+[ RUN      ] Voting.find_winners_one
+[       OK ] Voting.find_winners_one (8 ms)
+[ RUN      ] Voting.find_losers_1
+[       OK ] Voting.find_losers_1 (10 ms)
+[ RUN      ] Voting.find_losers_2
+[       OK ] Voting.find_losers_2 (6 ms)
+[ RUN      ] Voting.find_losers_additional
+[       OK ] Voting.find_losers_additional (6 ms)
+[ RUN      ] Voting.ballot_read_1
+[       OK ] Voting.ballot_read_1 (29 ms)
+[ RUN      ] Voting.ballot_read_2
+[       OK ] Voting.ballot_read_2 (6 ms)
+[ RUN      ] Voting.ballot_read_3
+[       OK ] Voting.ballot_read_3 (4 ms)
+[ RUN      ] Voting.ballot_read_4
+[       OK ] Voting.ballot_read_4 (4 ms)
+[ RUN      ] Voting.read_info_1
+[       OK ] Voting.read_info_1 (19 ms)
+[ RUN      ] Voting.read_info_2
+[       OK ] Voting.read_info_2 (8 ms)
+[ RUN      ] Voting.determine_winner_1
+[       OK ] Voting.determine_winner_1 (26 ms)
+[ RUN      ] Voting.determine_winner_tie
+[       OK ] Voting.determine_winner_tie (24 ms)
+[ RUN      ] Voting.solve_1
+[       OK ] Voting.solve_1 (7 ms)
+[ RUN      ] Voting.solve_2
+[       OK ] Voting.solve_2 (7 ms)
+[ RUN      ] Voting.solve_3
+[       OK ] Voting.solve_3 (8 ms)
+[ RUN      ] Voting.solve_4
+[       OK ] Voting.solve_4 (6 ms)
+[ RUN      ] Voting.solve_5
+[       OK ] Voting.solve_5 (7 ms)
+[ RUN      ] Voting.solve_6
+[       OK ] Voting.solve_6 (4 ms)
+[ RUN      ] Voting.solve_7
+[       OK ] Voting.solve_7 (5 ms)
+[ RUN      ] Voting.print_winners_1
+[       OK ] Voting.print_winners_1 (6 ms)
+[ RUN      ] Voting.print_winners_2
+[       OK ] Voting.print_winners_2 (5 ms)
+[ RUN      ] Voting.print_winners_3
+[       OK ] Voting.print_winners_3 (5 ms)
+[ RUN      ] Voting.update_votes_1
+[       OK ] Voting.update_votes_1 (17 ms)
+[----------] 29 tests from Voting (286 ms total)
+
+[----------] Global test environment tear-down
+[==========] 36 tests from 2 test cases ran. (455 ms total)
+[  PASSED  ] 36 tests.
