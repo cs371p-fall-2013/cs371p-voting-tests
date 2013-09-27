@@ -452,7 +452,7 @@ TEST(VotingDetermineOutcomeTest, LoserEventuallyBreaksTie) {
 // decide_simple_majority
 // ----------------------
 
-TEST(VotingDecideSimpleMajority, AllVotes) {
+TEST(VotingDecideSimpleMajorityTest, AllVotes) {
 	CandidateList candidates {"A", "B"};
 	set<int> contender_set {1};
 	map<int, int> votes_by_cand {{1, 2}};
@@ -465,7 +465,7 @@ TEST(VotingDecideSimpleMajority, AllVotes) {
 	ASSERT_STREQ("A", winner.c_str());
 }
 
-TEST(VotingDecideSimpleMajority, MostVotes) {
+TEST(VotingDecideSimpleMajorityTest, MostVotes) {
 	CandidateList candidates {"A", "B"};
 	set<int> contender_set {1, 2};
 	map<int, int> votes_by_cand {{1, 1}, {2, 2}};
@@ -478,7 +478,7 @@ TEST(VotingDecideSimpleMajority, MostVotes) {
 	ASSERT_STREQ("B", winner.c_str());
 }
 
-TEST(VotingDecideSimpleMajority, HalfVotes) {
+TEST(VotingDecideSimpleMajorityTest, HalfVotes) {
 	CandidateList candidates {"A", "B"};
 	set<int> contender_set {1, 2};
 	map<int, int> votes_by_cand {{1, 1}, {2, 1}};
@@ -490,7 +490,7 @@ TEST(VotingDecideSimpleMajority, HalfVotes) {
 	ASSERT_FALSE(decided);
 }
 
-TEST(VotingDecideSimpleMajority, FewVotes) {
+TEST(VotingDecideSimpleMajorityTest, FewVotes) {
 	CandidateList candidates {"A", "B", "C"};
 	set<int> contender_set {1, 2, 3};
 	map<int, int> votes_by_cand {{1, 1}, {2, 1}, {3, 1}};
@@ -506,7 +506,7 @@ TEST(VotingDecideSimpleMajority, FewVotes) {
 // find_min_max_votes_from_contenders
 // ----------------------------------
 
-TEST(VotingFindMinMaxVotes, NoZero) {
+TEST(VotingFindMinMaxVotesTest, NoZero) {
 	set<int> contender_set {1, 2};
 	map<int, int> votes_by_cand {{1, 2}, {2, 1}};
 	int total_num_ballots = 3;
@@ -519,7 +519,7 @@ TEST(VotingFindMinMaxVotes, NoZero) {
 	ASSERT_EQ(2, max_votes);
 }
 
-TEST(VotingFindMinMaxVotes, WithZero) {
+TEST(VotingFindMinMaxVotesTest, WithZero) {
 	set<int> contender_set {1, 2, 3};
 	map<int, int> votes_by_cand {{1, 0}, {2, 1}, {3, 2}};
 	int total_num_ballots = 3;
@@ -532,7 +532,7 @@ TEST(VotingFindMinMaxVotes, WithZero) {
 	ASSERT_EQ(2, max_votes);
 }
 
-TEST(VotingFindMinMaxVotes, MinMaxSame) {
+TEST(VotingFindMinMaxVotesTest, MinMaxSame) {
 	set<int> contender_set {1, 2};
 	map<int, int> votes_by_cand {{1, 1}, {2, 1}};
 	int total_num_ballots = 2;
@@ -549,7 +549,7 @@ TEST(VotingFindMinMaxVotes, MinMaxSame) {
 // determine_tie_winners
 // ---------------------
 
-TEST(VotingDetermineTieWinners, TwoWayTie) {
+TEST(VotingDetermineTieWinnersTest, TwoWayTie) {
 	CandidateList candidates {"A", "B"};
 	set<int> contender_set {1, 2};
 	string winner;
@@ -559,7 +559,7 @@ TEST(VotingDetermineTieWinners, TwoWayTie) {
 	ASSERT_STREQ("A\nB", winner.c_str());
 }
 
-TEST(VotingDetermineTieWinners, MultiWayTie) {
+TEST(VotingDetermineTieWinnersTest, MultiWayTie) {
 	CandidateList candidates {"A", "B", "C", "D"};
 	set<int> contender_set {2, 3, 4};
 	string winner;
@@ -576,7 +576,7 @@ TEST(VotingDetermineTieWinners, MultiWayTie) {
 // there must be at least 3 contenders,
 // else we had a simple majority or a tie earlier
 
-TEST(VotingDemoteContenders, DemoteOne) {
+TEST(VotingDemoteContendersTest, DemoteOne) {
 	set<int> contender_set {1, 2, 3};
 	map<int, int> votes_by_cand {{1, 2}, {2, 2}, {3, 1}};
 	int min_votes = 1;
@@ -596,7 +596,7 @@ TEST(VotingDemoteContenders, DemoteOne) {
 	ASSERT_EQ(expected_contenders, contender_set);
 }
 
-TEST(VotingDemoteContenders, DemoteMultiple) {
+TEST(VotingDemoteContendersTest, DemoteMultiple) {
 	set<int> contender_set {1, 2, 3, 4};
 	map<int, int> votes_by_cand {{1, 2}, {2, 2}, {3, 1}, {4, 1}};
 	int min_votes = 1;
@@ -617,7 +617,7 @@ TEST(VotingDemoteContenders, DemoteMultiple) {
 	ASSERT_EQ(expected_contenders, contender_set);
 }
 
-TEST(VotingDemoteContenders, DemoteMultipleVotingForEachOther) {
+TEST(VotingDemoteContendersTest, DemoteMultipleVotingForEachOther) {
 	set<int> contender_set {1, 2, 3, 4};
 	map<int, int> votes_by_cand {{1, 2}, {2, 2}, {3, 1}, {4, 1}};
 	int min_votes = 1;
@@ -644,7 +644,7 @@ TEST(VotingDemoteContenders, DemoteMultipleVotingForEachOther) {
 
 // first candidate in ballot is necessarily a loser
 
-TEST(VotingReassignLoserBallots, NoLosers) {
+TEST(VotingReassignLoserBallotsTest, NoLosers) {
 	BallotList loser_ballots {
 		{1, 2, 3},
 		{1, 2, 3},
@@ -674,7 +674,7 @@ TEST(VotingReassignLoserBallots, NoLosers) {
 	ASSERT_EQ(expected_ballots_by_first_choice, ballots_info.ballots_by_first_choice);
 }
 
-TEST(VotingReassignLoserBallots, SomeLosers) {
+TEST(VotingReassignLoserBallotsTest, SomeLosers) {
 	BallotList loser_ballots {
 		{1, 2, 3, 4, 5},
 		{1, 4, 5, 2, 3},
@@ -710,7 +710,7 @@ TEST(VotingReassignLoserBallots, SomeLosers) {
 // first candidate in the ballot is always a loser,
 // so we start looking at second
 
-TEST(VotingWhoShouldInheritVote, HeirSecond) {
+TEST(VotingWhoShouldInheritVoteTest, HeirSecond) {
 	Ballot loser_ballot {1, 2, 3, 4};
 	set<int> loser_set {1};
 
@@ -719,7 +719,7 @@ TEST(VotingWhoShouldInheritVote, HeirSecond) {
 	ASSERT_EQ(2, heir_index);
 }
 
-TEST(VotingWhoShouldInheritVote, HeirInMiddle) {
+TEST(VotingWhoShouldInheritVoteTest, HeirInMiddle) {
 	Ballot loser_ballot {1, 2, 3, 4};
 	set<int> loser_set {1, 2};
 
@@ -728,7 +728,7 @@ TEST(VotingWhoShouldInheritVote, HeirInMiddle) {
 	ASSERT_EQ(3, heir_index);
 }
 
-TEST(VotingWhoShouldInheritVote, HeirLast) {
+TEST(VotingWhoShouldInheritVoteTest, HeirLast) {
 	Ballot loser_ballot {1, 2, 3, 4};
 	set<int> loser_set {1, 2, 3};
 

@@ -451,7 +451,7 @@ TEST(Voting, solve_one_candidate) {
 
 	voting_solve(r, w);
 	
-	ASSERT_EQ("Kim Jong-un", w.str());
+	ASSERT_EQ("Kim Jong-un\n", w.str());
 	// Glory and praise to our dear leader!
 }
 
@@ -474,7 +474,7 @@ TEST(Voting, solve_tie) {
 
 	voting_solve(r, w);
 	
-	ASSERT_EQ("Red\nGreen", w.str());
+	ASSERT_EQ("Red\nGreen\n", w.str());
 }
 
 TEST(Voting, solve_total_tie) {
@@ -495,7 +495,7 @@ TEST(Voting, solve_total_tie) {
 
 	voting_solve(r, w);
 	
-	ASSERT_EQ("Red\nGreen\nBlue", w.str());
+	ASSERT_EQ("Red\nGreen\nBlue\n", w.str());
 }
 
 TEST(Voting, solve_uva_sample_input) {
@@ -518,7 +518,7 @@ TEST(Voting, solve_uva_sample_input) {
 
 	voting_solve(r, w);
 	
-	ASSERT_EQ("John Doe", w.str());
+	ASSERT_EQ("John Doe\n", w.str());
 }
 
 TEST(Voting, solve_more_candidates_than_ballots) {
@@ -538,7 +538,28 @@ TEST(Voting, solve_more_candidates_than_ballots) {
 
 	voting_solve(r, w);
 	
-	ASSERT_EQ("John Doe\nSirhan Sirhan", w.str());
+	ASSERT_EQ("John Doe\nSirhan Sirhan\n", w.str());
+}
+
+TEST(Voting, solve_same_names) {
+	std::stringstream str;
+	
+	str << "1" << std::endl;
+	str << std::endl;
+	str << "3" << std::endl;
+	str << "John Doe" << std::endl;
+	str << "John Doe" << std::endl;
+	str << "John Doe" << std::endl;
+    str << "1 2 3" << std::endl;
+    str << "2 3 1" << std::endl;
+    str << "3 1 2";
+
+	std::istringstream r(str.str());
+	std::ostringstream w;
+
+	voting_solve(r, w);
+	
+	ASSERT_EQ("John Doe\nJohn Doe\nJohn Doe\n", w.str());
 }
 
 TEST(Voting, solve_multiple_cases) {
@@ -580,6 +601,6 @@ TEST(Voting, solve_multiple_cases) {
 
 	voting_solve(r, w);
 	
-	ASSERT_EQ("Red\nBlue\n\nOne\n\nSpider-man", w.str());
+	ASSERT_EQ("Red\nBlue\n\nOne\n\nSpider-man\n", w.str());
 }
 
