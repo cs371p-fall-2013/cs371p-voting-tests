@@ -1,0 +1,51 @@
+Running main() from gtest_main.cc
+[==========] Running 21 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 21 tests from Voting
+[ RUN      ] Voting.read
+[       OK ] Voting.read (22 ms)
+[ RUN      ] Voting.read_2
+[       OK ] Voting.read_2 (2 ms)
+[ RUN      ] Voting.read_3
+[       OK ] Voting.read_3 (3 ms)
+[ RUN      ] Voting.read_4
+[       OK ] Voting.read_4 (3 ms)
+[ RUN      ] Voting.eval_1
+[       OK ] Voting.eval_1 (12 ms)
+[ RUN      ] Voting.eval_2
+[       OK ] Voting.eval_2 (5 ms)
+[ RUN      ] Voting.eval_3
+[       OK ] Voting.eval_3 (3 ms)
+[ RUN      ] Voting.eval_4
+[       OK ] Voting.eval_4 (6 ms)
+[ RUN      ] Voting.eval_5
+[       OK ] Voting.eval_5 (4 ms)
+[ RUN      ] Voting.dlv_1
+[       OK ] Voting.dlv_1 (2 ms)
+[ RUN      ] Voting.dlv_2
+[       OK ] Voting.dlv_2 (4 ms)
+[ RUN      ] Voting.dlv_3
+[       OK ] Voting.dlv_3 (6 ms)
+[ RUN      ] Voting.print
+[       OK ] Voting.print (8 ms)
+[ RUN      ] Voting.print_3
+[       OK ] Voting.print_3 (4 ms)
+[ RUN      ] Voting.print_4
+[       OK ] Voting.print_4 (4 ms)
+[ RUN      ] Voting.print_5
+[       OK ] Voting.print_5 (4 ms)
+[ RUN      ] Voting.solve
+[       OK ] Voting.solve (4 ms)
+[ RUN      ] Voting.solve_2
+[       OK ] Voting.solve_2 (3 ms)
+[ RUN      ] Voting.solve_3
+[       OK ] Voting.solve_3 (3 ms)
+[ RUN      ] Voting.solve_4
+[       OK ] Voting.solve_4 (2 ms)
+[ RUN      ] Voting.solve_5
+[       OK ] Voting.solve_5 (2 ms)
+[----------] 21 tests from Voting (121 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 1 test case ran. (155 ms total)
+[  PASSED  ] 21 tests.
