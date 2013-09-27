@@ -1,59 +1,61 @@
 Running main() from gtest_main.cc
-[==========] Running 25 tests from 1 test case.
+[==========] Running 26 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 25 tests from Voting
+[----------] 26 tests from Voting
 [ RUN      ] Voting.read_number_simple
-[       OK ] Voting.read_number_simple (20 ms)
+[       OK ] Voting.read_number_simple (27 ms)
 [ RUN      ] Voting.read_number_empty
 [       OK ] Voting.read_number_empty (4 ms)
 [ RUN      ] Voting.read_number_multiline
-[       OK ] Voting.read_number_multiline (4 ms)
+[       OK ] Voting.read_number_multiline (6 ms)
 [ RUN      ] Voting.read_number_sameline
-[       OK ] Voting.read_number_sameline (6 ms)
+[       OK ] Voting.read_number_sameline (9 ms)
 [ RUN      ] Voting.read_candidates_simple
-[       OK ] Voting.read_candidates_simple (22 ms)
+[       OK ] Voting.read_candidates_simple (30 ms)
 [ RUN      ] Voting.read_candidates_80_char
-[       OK ] Voting.read_candidates_80_char (5 ms)
+[       OK ] Voting.read_candidates_80_char (7 ms)
 [ RUN      ] Voting.read_candidates_rand_char
-[       OK ] Voting.read_candidates_rand_char (3 ms)
+[       OK ] Voting.read_candidates_rand_char (4 ms)
 [ RUN      ] Voting.read_many_candidates
-[       OK ] Voting.read_many_candidates (25 ms)
+[       OK ] Voting.read_many_candidates (37 ms)
 [ RUN      ] Voting.read_ballots_simple
-[       OK ] Voting.read_ballots_simple (20 ms)
+[       OK ] Voting.read_ballots_simple (15 ms)
 [ RUN      ] Voting.read_ballots_newlines
-[       OK ] Voting.read_ballots_newlines (4 ms)
+[       OK ] Voting.read_ballots_newlines (7 ms)
 [ RUN      ] Voting.read_multiple_ballots
-[       OK ] Voting.read_multiple_ballots (10 ms)
+[       OK ] Voting.read_multiple_ballots (15 ms)
 [ RUN      ] Voting.voting_eval_one_candidate
-[       OK ] Voting.voting_eval_one_candidate (47 ms)
+[       OK ] Voting.voting_eval_one_candidate (53 ms)
 [ RUN      ] Voting.voting_eval_two_candidates
 [       OK ] Voting.voting_eval_two_candidates (13 ms)
 [ RUN      ] Voting.voting_eval_tie
-[       OK ] Voting.voting_eval_tie (23 ms)
+[       OK ] Voting.voting_eval_tie (16 ms)
 [ RUN      ] Voting.voting_eval_majority_vote
 [       OK ] Voting.voting_eval_majority_vote (14 ms)
 [ RUN      ] Voting.voting_eval_more_candidates_than_ballots
-[       OK ] Voting.voting_eval_more_candidates_than_ballots (12 ms)
+[       OK ] Voting.voting_eval_more_candidates_than_ballots (11 ms)
 [ RUN      ] Voting.voting_eval_uva_sample_input
 [       OK ] Voting.voting_eval_uva_sample_input (29 ms)
 [ RUN      ] Voting.print_one_candidate
 [       OK ] Voting.print_one_candidate (10 ms)
 [ RUN      ] Voting.print_multiple_candidates
-[       OK ] Voting.print_multiple_candidates (7 ms)
+[       OK ] Voting.print_multiple_candidates (6 ms)
 [ RUN      ] Voting.solve_one_candidate
-[       OK ] Voting.solve_one_candidate (14 ms)
+[       OK ] Voting.solve_one_candidate (13 ms)
 [ RUN      ] Voting.solve_tie
 [       OK ] Voting.solve_tie (8 ms)
 [ RUN      ] Voting.solve_total_tie
-[       OK ] Voting.solve_total_tie (8 ms)
+[       OK ] Voting.solve_total_tie (7 ms)
 [ RUN      ] Voting.solve_uva_sample_input
-[       OK ] Voting.solve_uva_sample_input (8 ms)
+[       OK ] Voting.solve_uva_sample_input (7 ms)
 [ RUN      ] Voting.solve_more_candidates_than_ballots
-[       OK ] Voting.solve_more_candidates_than_ballots (8 ms)
+[       OK ] Voting.solve_more_candidates_than_ballots (7 ms)
+[ RUN      ] Voting.solve_same_names
+[       OK ] Voting.solve_same_names (8 ms)
 [ RUN      ] Voting.solve_multiple_cases
-[       OK ] Voting.solve_multiple_cases (17 ms)
-[----------] 25 tests from Voting (357 ms total)
+[       OK ] Voting.solve_multiple_cases (15 ms)
+[----------] 26 tests from Voting (405 ms total)
 
 [----------] Global test environment tear-down
-[==========] 25 tests from 1 test case ran. (405 ms total)
-[  PASSED  ] 25 tests.
+[==========] 26 tests from 1 test case ran. (450 ms total)
+[  PASSED  ] 26 tests.
