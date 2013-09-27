@@ -15,17 +15,9 @@ Running main() from gtest_main.cc
 [ RUN      ] Voting.read_election_3
 [       OK ] Voting.read_election_3 (0 ms)
 [ RUN      ] Voting.majority
-TestVoting.c++:108: Failure
-Value of: o.str() == "john doe\n"
-  Actual: false
-Expected: true
-[  FAILED  ] Voting.majority (0 ms)
+[       OK ] Voting.majority (0 ms)
 [----------] 7 tests from Voting (0 ms total)
 
 [----------] Global test environment tear-down
 [==========] 7 tests from 1 test case ran. (0 ms total)
-[  PASSED  ] 6 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] Voting.majority
-
- 1 FAILED TEST
+[  PASSED  ] 7 tests.
