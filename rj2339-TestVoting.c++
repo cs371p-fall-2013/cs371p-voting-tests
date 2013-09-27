@@ -4,28 +4,6 @@
 // Glenn P. Downing
 // --------------------------------
 
-/*
-To test the program:
-    % ls -al /usr/include/gtest/
-    ...
-    gtest.h
-    ...
-
-    % locate libgtest.a
-    /usr/lib/libgtest.a
-
-    % locate libpthread.a
-    /usr/lib/x86_64-linux-gnu/libpthread.a
-    /usr/lib32/libpthread.a
-
-    % locate libgtest_main.a
-    /usr/lib/libgtest_main.a
-
-    % g++ -pedantic -std=c++0x -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lpthread -lgtest_main
-
-    % valgrind TestCollatz > TestCollatz.out
-*/
-
 // --------
 // includes
 // --------
@@ -54,50 +32,50 @@ TEST(Candidate, initialize) {
 
 }
 
-TEST(Voting, initialize_ballots_1) {
-  Candidate ballot_list[20];
+TEST(Voting, initialize_candidates_1) {
+  Candidate candidates[20];
   int num_candidates = 3;
   
-  initialize_ballots(ballot_list, num_candidates);
-  ASSERT_TRUE(ballot_list[0].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[1].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[2].ballot_list.size() == 0);
+  initialize_candidates(candidates, num_candidates);
+  ASSERT_TRUE(candidates[0].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[1].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[2].ballot_list.size() == 0);
 }
 
-TEST(Voting, initialize_ballots_2) {
-  Candidate ballot_list[20];
+TEST(Voting, initialize_candidates_2) {
+  Candidate candidates[20];
   int num_candidates = 5;
   
-  initialize_ballots(ballot_list, num_candidates);
-  ASSERT_TRUE(ballot_list[0].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[1].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[2].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[3].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[4].ballot_list.size() == 0);  
+  initialize_candidates(candidates, num_candidates);
+  ASSERT_TRUE(candidates[0].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[1].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[2].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[3].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[4].ballot_list.size() == 0);  
 }
 
-TEST(Voting, initialize_ballots_3) {
-  Candidate ballot_list[20];
+TEST(Voting, initialize_candidates_3) {
+  Candidate candidates[20];
   int num_candidates = 10;
   
-  initialize_ballots(ballot_list, num_candidates);
-  ASSERT_TRUE(ballot_list[0].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[1].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[2].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[3].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[4].ballot_list.size() == 0);  
-  ASSERT_TRUE(ballot_list[5].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[6].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[7].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[8].ballot_list.size() == 0);
-  ASSERT_TRUE(ballot_list[9].ballot_list.size() == 0);  
+  initialize_candidates(candidates, num_candidates);
+  ASSERT_TRUE(candidates[0].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[1].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[2].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[3].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[4].ballot_list.size() == 0);  
+  ASSERT_TRUE(candidates[5].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[6].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[7].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[8].ballot_list.size() == 0);
+  ASSERT_TRUE(candidates[9].ballot_list.size() == 0);  
 }
 
 TEST(Voting, find_winners_none) {
   //int candidates[] = {2, 1, 2};
   Candidate candidates[20];
   
-  initialize_ballots(candidates, 3);
+  initialize_candidates(candidates, 3);
   candidates[0].votes = 2;
   candidates[1].votes = 1;
   candidates[2].votes = 2;
@@ -108,9 +86,8 @@ TEST(Voting, find_winners_none) {
 }
 
 TEST(Voting, find_winners_tie_1) {
-  //int candidates[] = {2, 2, 2, 0};
   Candidate candidates[20];
-  initialize_ballots(candidates, 4);
+  initialize_candidates(candidates, 4);
   
   candidates[0].votes = 2;
   candidates[1].votes = 2;
@@ -126,14 +103,12 @@ TEST(Voting, find_winners_tie_1) {
   ASSERT_TRUE(candidates[1].winner == true);
   ASSERT_TRUE(candidates[2].winner == true);
   ASSERT_TRUE(candidates[3].winner == false);
-
-
+  
 }
 
 TEST(Voting, find_winners_tie_2) {
-  //int candidates[] = {0, 2, 2, 2};
   Candidate candidates[20];
-  initialize_ballots(candidates, 4);
+  initialize_candidates(candidates, 4);
   
   candidates[0].votes = 0;
   candidates[1].votes = 2;
@@ -152,10 +127,8 @@ TEST(Voting, find_winners_tie_2) {
 }
 
 TEST(Voting, find_winners_one) { 
-  //int candidates[] = {2, 5, 2, 0};
-  
   Candidate candidates[20];
-  initialize_ballots(candidates, 4);
+  initialize_candidates(candidates, 4);
   
   candidates[0].votes = 2;
   candidates[1].votes = 5;
@@ -174,19 +147,14 @@ TEST(Voting, find_winners_one) {
   
 
 TEST(Voting, find_losers_1) {
-  //int candidates[] = {2, 1, 2};
-  
   Candidate losers[20];
-  initialize_ballots(losers, 3);
+  initialize_candidates(losers, 3);
   
   losers[0].votes = 2;
   losers[1].votes = 1;
   losers[2].votes = 2;
   
-  
-  
   find_losers(losers, 3);
-  
   
   ASSERT_TRUE(losers[0].loser == 0); 
   ASSERT_TRUE(losers[1].loser == 1); 
@@ -195,10 +163,8 @@ TEST(Voting, find_losers_1) {
 }
 
 TEST(Voting, find_losers_2) {
-  //int candidates[] = {1, 1, 3, 3};
-  
   Candidate losers[20];
-  initialize_ballots(losers, 4);
+  initialize_candidates(losers, 4);
 
   losers[0].votes = 1;
   losers[1].votes = 1;
@@ -213,32 +179,25 @@ TEST(Voting, find_losers_2) {
   ASSERT_TRUE(losers[2].loser == false); 
   ASSERT_TRUE(losers[3].loser == false); 
   
-
-  
 }
 
 TEST(Voting, find_losers_additional) {
-  //int candidates[] = {2, 1, 2, 0};
-  
   Candidate losers[20];
-  initialize_ballots(losers, 4);
+  initialize_candidates(losers, 4);
   
   losers[0].votes = 2;
   losers[1].votes = 1;
   losers[2].votes = 2;
   losers[3].votes = 0;  
   
-  
   find_losers(losers, 4);
   
-
   ASSERT_TRUE(losers[0].loser == false); 
   ASSERT_TRUE(losers[1].loser == true); 
   ASSERT_TRUE(losers[2].loser == false); 
   ASSERT_TRUE(losers[3].loser == true); 
   
 }
-
 
 TEST(Voting, ballot_read_1) {
     std::queue<int> ballots;
@@ -287,28 +246,28 @@ TEST(Voting, read_info_1) {
   
     int num_candidates;
     int num_ballots;
-    Candidate ballot_list[20];
+    Candidate candidates[20];
     
   
-    read_info(r, num_candidates, ballot_list, num_ballots);
+    read_info(r, num_candidates, candidates, num_ballots);
     ASSERT_TRUE(num_candidates == 3);
-    ASSERT_TRUE(ballot_list[0].name == "John Doe");
-    ASSERT_TRUE(ballot_list[2].name == "Sirhan Sirhan");  
+    ASSERT_TRUE(candidates[0].name == "John Doe");
+    ASSERT_TRUE(candidates[2].name == "Sirhan Sirhan");  
     
-    ASSERT_TRUE(ballot_list[0].ballot_list.size() == 2);
+    ASSERT_TRUE(candidates[0].ballot_list.size() == 2);
 }
 
 TEST(Voting, read_info_2) {
   std::istringstream r("2\nJean-Luc Picard\nJames T. Kirk\n1 2\n2 1\n2 1\n");
   int num_candidates;
   int num_ballots;
-  Candidate ballot_list[20];  
+  Candidate candidates[20];  
   
-  read_info(r, num_candidates, ballot_list, num_ballots);
+  read_info(r, num_candidates, candidates, num_ballots);
   ASSERT_TRUE(num_candidates == 2);
   ASSERT_TRUE(num_ballots == 3);
-  ASSERT_TRUE(ballot_list[0].name == "Jean-Luc Picard");
-  ASSERT_TRUE(ballot_list[1].votes == 2);
+  ASSERT_TRUE(candidates[0].name == "Jean-Luc Picard");
+  ASSERT_TRUE(candidates[1].votes == 2);
   
 }
 
@@ -317,13 +276,13 @@ TEST(Voting, determine_winner_1) {
     std::queue<int> ballots[3];     // TODO keep this but lower constant
     int num_candidates = 3;
     int num_ballots = 3; 
-    Candidate ballot_list[20];
+    Candidate candidates[20];
     
-    initialize_ballots(ballot_list, 3);
+    initialize_candidates(candidates, 3);
     
-    ballot_list[0].name = "John Doe";
-    ballot_list[1].name = "Jane Smith";
-    ballot_list[2].name = "Sirhan Sirhan";
+    candidates[0].name = "John Doe";
+    candidates[1].name = "Jane Smith";
+    candidates[2].name = "Sirhan Sirhan";
     
     ballots[0].push(1);
     ballots[0].push(2);
@@ -338,14 +297,14 @@ TEST(Voting, determine_winner_1) {
     ballots[2].push(1);
     
 
-    ballot_list[0].push_front(ballots[0]);
-    ballot_list[1].push_front(ballots[1]);
-    ballot_list[1].push_front(ballots[1]);
+    candidates[0].push_front(ballots[0]);
+    candidates[1].push_front(ballots[1]);
+    candidates[1].push_front(ballots[1]);
     
-    ballot_list[0].votes = 1;
-    ballot_list[1].votes = 2;
+    candidates[0].votes = 1;
+    candidates[1].votes = 2;
     
-    determine_winner(w, num_candidates, ballot_list, num_ballots);
+    determine_winner(w, num_candidates, candidates, num_ballots);
 
     ASSERT_TRUE(w.str() == "Jane Smith");
 } 
@@ -357,14 +316,14 @@ TEST(Voting, determine_winner_tie) {
     std::queue<int> ballots[6];    
     int num_candidates = 4;
     int num_ballots = 6; 
-    Candidate ballot_list[20];
+    Candidate candidates[20];
     
-    initialize_ballots(ballot_list, 4);
+    initialize_candidates(candidates, 4);
     
-    ballot_list[0].name = "Red";
-    ballot_list[1].name = "Green";
-    ballot_list[2].name = "Blue";
-    ballot_list[3].name = "Orange";
+    candidates[0].name = "Red";
+    candidates[1].name = "Green";
+    candidates[2].name = "Blue";
+    candidates[3].name = "Orange";
 
     ballots[0].push(1);
     ballots[0].push(2);
@@ -396,20 +355,20 @@ TEST(Voting, determine_winner_tie) {
     ballots[5].push(2); 
     ballots[5].push(1);
     
-    ballot_list[0].push_front(ballots[0]);
-    ballot_list[1].push_front(ballots[1]);
-    ballot_list[1].push_front(ballots[2]);
-    ballot_list[0].push_front(ballots[3]);
-    ballot_list[2].push_front(ballots[4]);
-    ballot_list[3].push_front(ballots[5]);
+    candidates[0].push_front(ballots[0]);
+    candidates[1].push_front(ballots[1]);
+    candidates[1].push_front(ballots[2]);
+    candidates[0].push_front(ballots[3]);
+    candidates[2].push_front(ballots[4]);
+    candidates[3].push_front(ballots[5]);
     
-    ballot_list[0].votes = 2;
-    ballot_list[1].votes = 2;
-    ballot_list[2].votes = 1;
-    ballot_list[3].votes = 1;
+    candidates[0].votes = 2;
+    candidates[1].votes = 2;
+    candidates[2].votes = 1;
+    candidates[3].votes = 1;
     
 
-    determine_winner(w, num_candidates, ballot_list, num_ballots);
+    determine_winner(w, num_candidates, candidates, num_ballots);
 
     ASSERT_TRUE(w.str() == "Red\nGreen");
 
@@ -479,130 +438,6 @@ TEST(Voting, solve_7) {
     ASSERT_TRUE(w.str() == "Jean-Luc Picard\n\nJames T. Kirk\n");
 }
 
-TEST(Voting, print_winners_1) {
-  //void print_winners(std::ostream& w, int winners[], std::string candidate_names[], int num_candidates) {
-  std::ostringstream w;
-
-  Candidate candidates[20];
-  int num_candidates = 3;
-  
-  initialize_ballots(candidates, num_candidates);
-  
-  candidates[0].name = "Bob";
-  candidates[1].name = "Alice";
-  candidates[2].name = "Joe";
-  
-  candidates[1].winner = true;
-  
-  print_winners(w, candidates, num_candidates);
-  ASSERT_TRUE(w.str() == "Alice");
-}
-
-TEST(Voting, print_winners_2) {
-  //void print_winners(std::ostream& w, int winners[], std::string candidate_names[], int num_candidates) {
-  std::ostringstream w;
-
-  Candidate candidate_names[20];
-  int num_candidates = 3;
-  
-  initialize_ballots(candidate_names, num_candidates);
-  
-  candidate_names[0].name = "Bob";
-  candidate_names[1].name = "Alice";
-  candidate_names[2].name = "Joe";
-  
-  candidate_names[0].winner = true;
-  candidate_names[1].winner = true;
-  
-  print_winners(w, candidate_names, num_candidates);
-  ASSERT_TRUE(w.str() == "Bob\nAlice");
-}
-
-TEST(Voting, print_winners_3) {
-  //void print_winners(std::ostream& w, int winners[], std::string candidate_names[], int num_candidates) {
-  std::ostringstream w;
-
-  Candidate candidate_names[20];
-  int num_candidates = 3;
-  
-  initialize_ballots(candidate_names, num_candidates);
-  
-  candidate_names[0].name = "Bob";
-  candidate_names[1].name = "Alice";
-  candidate_names[2].name = "Joe";
-  
-  candidate_names[0].winner = true;
-  candidate_names[1].winner = true;
-  candidate_names[2].winner = true;
-   
-  print_winners(w, candidate_names, num_candidates);
-  ASSERT_TRUE(w.str() == "Bob\nAlice\nJoe");
-}
-
-
-TEST(Voting, update_votes_1) {
-    std::ostringstream w;
-
-    std::queue<int> ballots[6];    
-    int num_candidates = 4;
-    
-    Candidate ballot_list[20];
-    
-    initialize_ballots(ballot_list, num_candidates);
-    
-    ballot_list[0].name = "Red";
-    ballot_list[1].name = "Green";
-    ballot_list[2].name = "Blue";
-    ballot_list[3].name = "Orange";
-
-    ballots[0].push(1);
-    ballots[0].push(2);
-    ballots[0].push(3);
-    ballots[0].push(4);
-
-    ballots[1].push(2); 
-    ballots[1].push(1); 
-    ballots[1].push(3);
-    ballots[1].push(4);
-
-    ballots[2].push(2); 
-    ballots[2].push(3);  
-    ballots[2].push(1);  
-    ballots[2].push(4);
-
-    ballots[3].push(1); 
-    ballots[3].push(2);
-    ballots[3].push(3);
-    ballots[3].push(4);
-
-    ballots[4].push(3); 
-    ballots[4].push(4); 
-    ballots[4].push(1); 
-    ballots[4].push(2);
-
-    ballots[5].push(4);
-    ballots[5].push(3);
-    ballots[5].push(2); 
-    ballots[5].push(1);
-    
-    ballot_list[0].push_front(ballots[0]);
-    ballot_list[1].push_front(ballots[1]);
-    ballot_list[1].push_front(ballots[2]);
-    ballot_list[0].push_front(ballots[3]);
-    ballot_list[2].push_front(ballots[4]);
-    ballot_list[3].push_front(ballots[5]);
-    
-    ballot_list[0].votes = 2;
-    ballot_list[1].votes = 2;
-    ballot_list[2].votes = 1;
-    ballot_list[3].votes = 1;
-    
-    ballot_list[2].update_votes(ballot_list, num_candidates);
-    
-    ASSERT_TRUE(ballot_list[2].votes == 0);
-    
-}
-
 TEST(Candidate, push_front_1) {
   Candidate c;
   c.initialize();
@@ -625,6 +460,7 @@ TEST(Candidate, push_front_2) {
   c.push_front(ballot2);
   ASSERT_TRUE(c.ballot_list.size() == 2);
 }
+
 TEST(Candidate, push_front_3) {
   Candidate c;
   c.initialize();
@@ -672,6 +508,132 @@ TEST(Candidate, clear_ballots_3) {
   ASSERT_TRUE(c.votes == 0);
   ASSERT_TRUE(c.ballot_list.size() == 0);
 }
+
+
+TEST(Voting, print_winners_1) {
+  //void print_winners(std::ostream& w, int winners[], std::string candidate_names[], int num_candidates) {
+  std::ostringstream w;
+
+  Candidate candidates[20];
+  int num_candidates = 3;
+  
+  initialize_candidates(candidates, num_candidates);
+  
+  candidates[0].name = "Bob";
+  candidates[1].name = "Alice";
+  candidates[2].name = "Joe";
+  
+  candidates[1].winner = true;
+  
+  print_winners(w, candidates, num_candidates);
+  ASSERT_TRUE(w.str() == "Alice");
+}
+
+TEST(Voting, print_winners_2) {
+  //void print_winners(std::ostream& w, int winners[], std::string candidate_names[], int num_candidates) {
+  std::ostringstream w;
+
+  Candidate candidate_names[20];
+  int num_candidates = 3;
+  
+  initialize_candidates(candidate_names, num_candidates);
+  
+  candidate_names[0].name = "Bob";
+  candidate_names[1].name = "Alice";
+  candidate_names[2].name = "Joe";
+  
+  candidate_names[0].winner = true;
+  candidate_names[1].winner = true;
+  
+  print_winners(w, candidate_names, num_candidates);
+  ASSERT_TRUE(w.str() == "Bob\nAlice");
+}
+
+TEST(Voting, print_winners_3) {
+  //void print_winners(std::ostream& w, int winners[], std::string candidate_names[], int num_candidates) {
+  std::ostringstream w;
+
+  Candidate candidate_names[20];
+  int num_candidates = 3;
+  
+  initialize_candidates(candidate_names, num_candidates);
+  
+  candidate_names[0].name = "Bob";
+  candidate_names[1].name = "Alice";
+  candidate_names[2].name = "Joe";
+  
+  candidate_names[0].winner = true;
+  candidate_names[1].winner = true;
+  candidate_names[2].winner = true;
+   
+  print_winners(w, candidate_names, num_candidates);
+  ASSERT_TRUE(w.str() == "Bob\nAlice\nJoe");
+}
+
+
+TEST(Voting, update_votes_1) {
+    std::ostringstream w;
+
+    std::queue<int> ballots[6];    
+    int num_candidates = 4;
+    
+    Candidate candidates[20];
+    
+    initialize_candidates(candidates, num_candidates);
+    
+    candidates[0].name = "Red";
+    candidates[1].name = "Green";
+    candidates[2].name = "Blue";
+    candidates[3].name = "Orange";
+
+    ballots[0].push(1);
+    ballots[0].push(2);
+    ballots[0].push(3);
+    ballots[0].push(4);
+
+    ballots[1].push(2); 
+    ballots[1].push(1); 
+    ballots[1].push(3);
+    ballots[1].push(4);
+
+    ballots[2].push(2); 
+    ballots[2].push(3);  
+    ballots[2].push(1);  
+    ballots[2].push(4);
+
+    ballots[3].push(1); 
+    ballots[3].push(2);
+    ballots[3].push(3);
+    ballots[3].push(4);
+
+    ballots[4].push(3); 
+    ballots[4].push(4); 
+    ballots[4].push(1); 
+    ballots[4].push(2);
+
+    ballots[5].push(4);
+    ballots[5].push(3);
+    ballots[5].push(2); 
+    ballots[5].push(1);
+    
+    candidates[0].push_front(ballots[0]);
+    candidates[1].push_front(ballots[1]);
+    candidates[1].push_front(ballots[2]);
+    candidates[0].push_front(ballots[3]);
+    candidates[2].push_front(ballots[4]);
+    candidates[3].push_front(ballots[5]);
+    
+    candidates[0].votes = 2;
+    candidates[1].votes = 2;
+    candidates[2].votes = 1;
+    candidates[3].votes = 1;
+    
+    candidates[2].update_votes(candidates, num_candidates);
+    
+    ASSERT_TRUE(candidates[2].votes == 0);
+    
+}
+
 
 
 
