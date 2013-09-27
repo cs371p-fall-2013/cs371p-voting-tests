@@ -1,0 +1,51 @@
+Running main() from gtest_main.cc
+[==========] Running 21 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 21 tests from Voting
+[ RUN      ] Voting.election_num_read_1
+[       OK ] Voting.election_num_read_1 (0 ms)
+[ RUN      ] Voting.election_num_read_2
+[       OK ] Voting.election_num_read_2 (0 ms)
+[ RUN      ] Voting.election_num_read_3
+[       OK ] Voting.election_num_read_3 (0 ms)
+[ RUN      ] Voting.candidate_num_read_1
+[       OK ] Voting.candidate_num_read_1 (0 ms)
+[ RUN      ] Voting.candidate_num_read_2
+[       OK ] Voting.candidate_num_read_2 (0 ms)
+[ RUN      ] Voting.candidate_num_read_3
+[       OK ] Voting.candidate_num_read_3 (0 ms)
+[ RUN      ] Voting.candidate_name_read_1
+[       OK ] Voting.candidate_name_read_1 (0 ms)
+[ RUN      ] Voting.candidate_name_read_2
+[       OK ] Voting.candidate_name_read_2 (0 ms)
+[ RUN      ] Voting.candidate_name_read_3
+[       OK ] Voting.candidate_name_read_3 (0 ms)
+[ RUN      ] Voting.ballot_read_1
+[       OK ] Voting.ballot_read_1 (0 ms)
+[ RUN      ] Voting.ballot_read_2
+[       OK ] Voting.ballot_read_2 (0 ms)
+[ RUN      ] Voting.ballot_read_3
+[       OK ] Voting.ballot_read_3 (0 ms)
+[ RUN      ] Voting.decision_1
+[       OK ] Voting.decision_1 (0 ms)
+[ RUN      ] Voting.decision_2
+[       OK ] Voting.decision_2 (0 ms)
+[ RUN      ] Voting.decision_3
+[       OK ] Voting.decision_3 (0 ms)
+[ RUN      ] Voting.loser_eliminator_1
+[       OK ] Voting.loser_eliminator_1 (0 ms)
+[ RUN      ] Voting.loser_eliminator_2
+[       OK ] Voting.loser_eliminator_2 (0 ms)
+[ RUN      ] Voting.loser_eliminator_3
+[       OK ] Voting.loser_eliminator_3 (0 ms)
+[ RUN      ] Voting.output_1
+[       OK ] Voting.output_1 (0 ms)
+[ RUN      ] Voting.output_2
+[       OK ] Voting.output_2 (0 ms)
+[ RUN      ] Voting.output_3
+[       OK ] Voting.output_3 (0 ms)
+[----------] 21 tests from Voting (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 21 tests.
