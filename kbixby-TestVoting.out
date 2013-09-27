@@ -1,7 +1,7 @@
 Running main() from gtest_main.cc
-[==========] Running 35 tests from 1 test case.
+[==========] Running 31 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 35 tests from Voting
+[----------] 31 tests from Voting
 [ RUN      ] Voting.printOneWinner
 [       OK ] Voting.printOneWinner (0 ms)
 [ RUN      ] Voting.printThreeWinner
@@ -21,11 +21,9 @@ Running main() from gtest_main.cc
 [ RUN      ] Voting.remainingTied
 [       OK ] Voting.remainingTied (0 ms)
 [ RUN      ] Voting.RedistTest1
-[       OK ] Voting.RedistTest1 (0 ms)
+[       OK ] Voting.RedistTest1 (1 ms)
 [ RUN      ] Voting.RedistTest2
-[       OK ] Voting.RedistTest2 (0 ms)
-[ RUN      ] Voting.RedistTest3
-[       OK ] Voting.RedistTest3 (0 ms)
+[       OK ] Voting.RedistTest2 (1 ms)
 [ RUN      ] Voting.isWinner
 [       OK ] Voting.isWinner (0 ms)
 [ RUN      ] Voting.isLoser
@@ -43,7 +41,7 @@ Running main() from gtest_main.cc
 [ RUN      ] Voting.setupNames2
 [       OK ] Voting.setupNames2 (0 ms)
 [ RUN      ] Voting.setupNames3
-[       OK ] Voting.setupNames3 (0 ms)
+[       OK ] Voting.setupNames3 (1 ms)
 [ RUN      ] Voting.setupBallotsOneCandidate
 [       OK ] Voting.setupBallotsOneCandidate (0 ms)
 [ RUN      ] Voting.setupBallotsOneBallot
@@ -52,14 +50,8 @@ Running main() from gtest_main.cc
 [       OK ] Voting.setupBallotsOneVote (0 ms)
 [ RUN      ] Voting.setupBallotsGeneral
 [       OK ] Voting.setupBallotsGeneral (0 ms)
-[ RUN      ] Voting.setupVotesGeneral
-[       OK ] Voting.setupVotesGeneral (0 ms)
-[ RUN      ] Voting.setupVotesOneBallot
-[       OK ] Voting.setupVotesOneBallot (0 ms)
-[ RUN      ] Voting.setupVotesOneCandidate
-[       OK ] Voting.setupVotesOneCandidate (0 ms)
 [ RUN      ] Voting.electionSetupGeneral
-[       OK ] Voting.electionSetupGeneral (0 ms)
+[       OK ] Voting.electionSetupGeneral (1 ms)
 [ RUN      ] Voting.electionSetupOneCandidate
 [       OK ] Voting.electionSetupOneCandidate (0 ms)
 [ RUN      ] Voting.electionSetupOneBallot
@@ -69,11 +61,11 @@ Running main() from gtest_main.cc
 [ RUN      ] Voting.sessionSetupOneElectionOneCandidate
 [       OK ] Voting.sessionSetupOneElectionOneCandidate (0 ms)
 [ RUN      ] Voting.sessionSetupOneElectionOneBallot
-[       OK ] Voting.sessionSetupOneElectionOneBallot (0 ms)
+[       OK ] Voting.sessionSetupOneElectionOneBallot (1 ms)
 [ RUN      ] Voting.sessionSetupElectionGeneral
 [       OK ] Voting.sessionSetupElectionGeneral (0 ms)
-[----------] 35 tests from Voting (0 ms total)
+[----------] 31 tests from Voting (5 ms total)
 
 [----------] Global test environment tear-down
-[==========] 35 tests from 1 test case ran. (0 ms total)
-[  PASSED  ] 35 tests.
+[==========] 31 tests from 1 test case ran. (5 ms total)
+[  PASSED  ] 31 tests.
