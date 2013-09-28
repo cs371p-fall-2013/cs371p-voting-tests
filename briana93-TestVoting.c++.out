@@ -1,0 +1,53 @@
+Running main() from gtest_main.cc
+[==========] Running 22 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 22 tests from Voting
+[ RUN      ] Voting.readCases_1
+[       OK ] Voting.readCases_1 (25 ms)
+[ RUN      ] Voting.readCases_2
+[       OK ] Voting.readCases_2 (3 ms)
+[ RUN      ] Voting.readCases_3
+[       OK ] Voting.readCases_3 (4 ms)
+[ RUN      ] Voting.readCandidates_1
+[       OK ] Voting.readCandidates_1 (15 ms)
+[ RUN      ] Voting.readCandidates_2
+[       OK ] Voting.readCandidates_2 (11 ms)
+[ RUN      ] Voting.readCandidates_3
+[       OK ] Voting.readCandidates_3 (5 ms)
+[ RUN      ] Voting.readCandidates_4
+[       OK ] Voting.readCandidates_4 (24 ms)
+[ RUN      ] Voting.readBallots_1
+[       OK ] Voting.readBallots_1 (25 ms)
+[ RUN      ] Voting.readBallots_2
+[       OK ] Voting.readBallots_2 (24 ms)
+[ RUN      ] Voting.readBallots_3
+[       OK ] Voting.readBallots_3 (29 ms)
+[ RUN      ] Voting.voting_eval_1
+[       OK ] Voting.voting_eval_1 (13 ms)
+[ RUN      ] Voting.voting_eval_2
+[       OK ] Voting.voting_eval_2 (11 ms)
+[ RUN      ] Voting.voting_eval_3
+[       OK ] Voting.voting_eval_3 (11 ms)
+[ RUN      ] Voting.voting_print_1
+[       OK ] Voting.voting_print_1 (13 ms)
+[ RUN      ] Voting.voting_print_2
+[       OK ] Voting.voting_print_2 (13 ms)
+[ RUN      ] Voting.voting_print_3
+[       OK ] Voting.voting_print_3 (17 ms)
+[ RUN      ] Voting.findWinnersAndLosers_1
+[       OK ] Voting.findWinnersAndLosers_1 (18 ms)
+[ RUN      ] Voting.findWinnersAndLosers_2
+[       OK ] Voting.findWinnersAndLosers_2 (19 ms)
+[ RUN      ] Voting.findWinnersAndLosers_3
+[       OK ] Voting.findWinnersAndLosers_3 (32 ms)
+[ RUN      ] Voting.reassignTallies_1
+[       OK ] Voting.reassignTallies_1 (18 ms)
+[ RUN      ] Voting.reassignTallies_2
+[       OK ] Voting.reassignTallies_2 (58 ms)
+[ RUN      ] Voting.reassignTallies_3
+[       OK ] Voting.reassignTallies_3 (32 ms)
+[----------] 22 tests from Voting (441 ms total)
+
+[----------] Global test environment tear-down
+[==========] 22 tests from 1 test case ran. (484 ms total)
+[  PASSED  ] 22 tests.
