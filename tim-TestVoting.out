@@ -1,0 +1,61 @@
+Running main() from gtest_main.cc
+[==========] Running 26 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 26 tests from Voting
+[ RUN      ] Voting.voting_read_number_of_candidates1
+[       OK ] Voting.voting_read_number_of_candidates1 (36 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates2
+[       OK ] Voting.voting_read_number_of_candidates2 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates3
+[       OK ] Voting.voting_read_number_of_candidates3 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates4
+[       OK ] Voting.voting_read_number_of_candidates4 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates5
+[       OK ] Voting.voting_read_number_of_candidates5 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates6
+[       OK ] Voting.voting_read_number_of_candidates6 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates7
+[       OK ] Voting.voting_read_number_of_candidates7 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates8
+[       OK ] Voting.voting_read_number_of_candidates8 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates9
+[       OK ] Voting.voting_read_number_of_candidates9 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates10
+[       OK ] Voting.voting_read_number_of_candidates10 (4 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates11
+[       OK ] Voting.voting_read_number_of_candidates11 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates12
+[       OK ] Voting.voting_read_number_of_candidates12 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates13
+[       OK ] Voting.voting_read_number_of_candidates13 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates14
+[       OK ] Voting.voting_read_number_of_candidates14 (4 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates15
+[       OK ] Voting.voting_read_number_of_candidates15 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates16
+[       OK ] Voting.voting_read_number_of_candidates16 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates17
+[       OK ] Voting.voting_read_number_of_candidates17 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates18
+[       OK ] Voting.voting_read_number_of_candidates18 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates19
+[       OK ] Voting.voting_read_number_of_candidates19 (4 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates20
+[       OK ] Voting.voting_read_number_of_candidates20 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates21
+[       OK ] Voting.voting_read_number_of_candidates21 (4 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates22
+[       OK ] Voting.voting_read_number_of_candidates22 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates23
+[       OK ] Voting.voting_read_number_of_candidates23 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates24
+[       OK ] Voting.voting_read_number_of_candidates24 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates25
+[       OK ] Voting.voting_read_number_of_candidates25 (3 ms)
+[ RUN      ] Voting.voting_read_number_of_candidates26
+[       OK ] Voting.voting_read_number_of_candidates26 (3 ms)
+[----------] 26 tests from Voting (134 ms total)
+
+[----------] Global test environment tear-down
+[==========] 26 tests from 1 test case ran. (176 ms total)
+[  PASSED  ] 26 tests.
