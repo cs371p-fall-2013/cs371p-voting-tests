@@ -1,4 +1,3 @@
-
 /*
 To test the program:
 % ls -al /usr/include/gtest/
