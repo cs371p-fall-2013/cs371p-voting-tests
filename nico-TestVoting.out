@@ -1,0 +1,51 @@
+Running main() from gtest_main.cc
+[==========] Running 21 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 21 tests from voting
+[ RUN      ] voting.reassign_ballots
+[       OK ] voting.reassign_ballots (56 ms)
+[ RUN      ] voting.reassign_ballots_2
+[       OK ] voting.reassign_ballots_2 (8 ms)
+[ RUN      ] voting.reassign_ballots_3
+[       OK ] voting.reassign_ballots_3 (6 ms)
+[ RUN      ] voting.bag_size
+[       OK ] voting.bag_size (5 ms)
+[ RUN      ] voting.bag_size_2
+[       OK ] voting.bag_size_2 (5 ms)
+[ RUN      ] voting.bag_size_3
+[       OK ] voting.bag_size_3 (5 ms)
+[ RUN      ] voting.all_tied
+[       OK ] voting.all_tied (6 ms)
+[ RUN      ] voting.all_tied_2
+[       OK ] voting.all_tied_2 (4 ms)
+[ RUN      ] voting.all_tied_3
+[       OK ] voting.all_tied_3 (4 ms)
+[ RUN      ] voting.find_winner
+[       OK ] voting.find_winner (6 ms)
+[ RUN      ] voting.find_winner_1
+[       OK ] voting.find_winner_1 (6 ms)
+[ RUN      ] voting.find_winner_2
+[       OK ] voting.find_winner_2 (9 ms)
+[ RUN      ] voting.get_vote
+[       OK ] voting.get_vote (2 ms)
+[ RUN      ] voting.get_vote_1
+[       OK ] voting.get_vote_1 (3 ms)
+[ RUN      ] voting.get_vote_2
+[       OK ] voting.get_vote_2 (2 ms)
+[ RUN      ] voting.read_ballots
+[       OK ] voting.read_ballots (13 ms)
+[ RUN      ] voting.read_ballots_2
+[       OK ] voting.read_ballots_2 (5 ms)
+[ RUN      ] voting.read_ballots_3
+[       OK ] voting.read_ballots_3 (4 ms)
+[ RUN      ] voting.read_names
+[       OK ] voting.read_names (6 ms)
+[ RUN      ] voting.read_names_2
+[       OK ] voting.read_names_2 (3 ms)
+[ RUN      ] voting.read_names_3
+[       OK ] voting.read_names_3 (4 ms)
+[----------] 21 tests from voting (180 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 1 test case ran. (221 ms total)
+[  PASSED  ] 21 tests.
