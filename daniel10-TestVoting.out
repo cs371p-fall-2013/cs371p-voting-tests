@@ -1,0 +1,36 @@
+Running main() from gtest_main.cc
+[==========] Running 9 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 9 tests from Voting
+[ RUN      ] Voting.set_losers1
+[       OK ] Voting.set_losers1 (65 ms)
+[ RUN      ] Voting.set_losers2
+[       OK ] Voting.set_losers2 (10 ms)
+[ RUN      ] Voting.set_losers3
+[       OK ] Voting.set_losers3 (8 ms)
+[ RUN      ] Voting.has_winners1
+George Washington
+[       OK ] Voting.has_winners1 (29 ms)
+[ RUN      ] Voting.has_winners2
+[       OK ] Voting.has_winners2 (10 ms)
+[ RUN      ] Voting.has_winners3
+Teddy Rosevelt
+[       OK ] Voting.has_winners3 (4 ms)
+[ RUN      ] Voting.evaluate1
+Teddy Rosevelt
+[       OK ] Voting.evaluate1 (35 ms)
+[ RUN      ] Voting.evaluate2
+Teddy Rosevelt
+[       OK ] Voting.evaluate2 (11 ms)
+[ RUN      ] Voting.evaluate3
+Teddy Rosevelt
+Barack Obamizzle
+Georgrizzle Bush
+Kennedy
+Douglas
+[       OK ] Voting.evaluate3 (9 ms)
+[----------] 9 tests from Voting (202 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test case ran. (245 ms total)
+[  PASSED  ] 9 tests.
