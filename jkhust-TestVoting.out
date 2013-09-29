@@ -1,0 +1,128 @@
+Running main() from gtest_main.cc
+[==========] Running 55 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 21 tests from candidates
+[ RUN      ] candidates.clear_1
+[       OK ] candidates.clear_1 (38 ms)
+[ RUN      ] candidates.clear_2
+[       OK ] candidates.clear_2 (29 ms)
+[ RUN      ] candidates.clear_3
+[       OK ] candidates.clear_3 (7 ms)
+[ RUN      ] candidates.clear_4
+[       OK ] candidates.clear_4 (9 ms)
+[ RUN      ] candidates.getCount_1
+[       OK ] candidates.getCount_1 (6 ms)
+[ RUN      ] candidates.getCount_2
+[       OK ] candidates.getCount_2 (7 ms)
+[ RUN      ] candidates.getCount_3
+[       OK ] candidates.getCount_3 (9 ms)
+[ RUN      ] candidates.getCount_4
+[       OK ] candidates.getCount_4 (9 ms)
+[ RUN      ] candidates.add_1
+[       OK ] candidates.add_1 (5 ms)
+[ RUN      ] candidates.add_2
+[       OK ] candidates.add_2 (7 ms)
+[ RUN      ] candidates.add_3
+[       OK ] candidates.add_3 (8 ms)
+[ RUN      ] candidates.resetVotes_1
+[       OK ] candidates.resetVotes_1 (7 ms)
+[ RUN      ] candidates.resetVotes_2
+[       OK ] candidates.resetVotes_2 (7 ms)
+[ RUN      ] candidates.addVotes_1
+[       OK ] candidates.addVotes_1 (7 ms)
+[ RUN      ] candidates.addVotes_2
+[       OK ] candidates.addVotes_2 (6 ms)
+[ RUN      ] candidates.addVotes_3
+[       OK ] candidates.addVotes_3 (7 ms)
+[ RUN      ] candidates.addVotes_4
+[       OK ] candidates.addVotes_4 (9 ms)
+[ RUN      ] candidates.addVotes_5
+[       OK ] candidates.addVotes_5 (9 ms)
+[ RUN      ] candidates.getNumVotes_1
+[       OK ] candidates.getNumVotes_1 (6 ms)
+[ RUN      ] candidates.getNumVotes_2
+[       OK ] candidates.getNumVotes_2 (6 ms)
+[ RUN      ] candidates.getNumVotes_3
+[       OK ] candidates.getNumVotes_3 (7 ms)
+[----------] 21 tests from candidates (248 ms total)
+
+[----------] 5 tests from ballots
+[ RUN      ] ballots.clear_1
+[       OK ] ballots.clear_1 (7 ms)
+[ RUN      ] ballots.getCount_1
+[       OK ] ballots.getCount_1 (6 ms)
+[ RUN      ] ballots.add_1
+[       OK ] ballots.add_1 (59 ms)
+[ RUN      ] ballots.add_2
+[       OK ] ballots.add_2 (16 ms)
+[ RUN      ] ballots.add_3
+[       OK ] ballots.add_3 (18 ms)
+[----------] 5 tests from ballots (109 ms total)
+
+[----------] 26 tests from election
+[ RUN      ] election.tally_1
+[       OK ] election.tally_1 (11 ms)
+[ RUN      ] election.tally_2
+[       OK ] election.tally_2 (14 ms)
+[ RUN      ] election.tally_3
+[       OK ] election.tally_3 (12 ms)
+[ RUN      ] election.tally_4
+[       OK ] election.tally_4 (13 ms)
+[ RUN      ] election.tally_5
+[       OK ] election.tally_5 (17 ms)
+[ RUN      ] election.hasMajorityWinner_1
+[       OK ] election.hasMajorityWinner_1 (18 ms)
+[ RUN      ] election.hasMajorityWinner_2
+[       OK ] election.hasMajorityWinner_2 (16 ms)
+[ RUN      ] election.hasMajorityWinner_3
+[       OK ] election.hasMajorityWinner_3 (15 ms)
+[ RUN      ] election.hasMajorityWinner_4
+[       OK ] election.hasMajorityWinner_4 (22 ms)
+[ RUN      ] election.isDeadTie_1
+[       OK ] election.isDeadTie_1 (17 ms)
+[ RUN      ] election.isDeadTie_2
+[       OK ] election.isDeadTie_2 (12 ms)
+[ RUN      ] election.isDeadTie_3
+[       OK ] election.isDeadTie_3 (14 ms)
+[ RUN      ] election.isDeadTie_4
+[       OK ] election.isDeadTie_4 (21 ms)
+[ RUN      ] election.tryRunoff_1
+[       OK ] election.tryRunoff_1 (25 ms)
+[ RUN      ] election.tryRunoff_2
+[       OK ] election.tryRunoff_2 (21 ms)
+[ RUN      ] election.tryRunoff_3
+[       OK ] election.tryRunoff_3 (23 ms)
+[ RUN      ] election.tryRunoff_4
+[       OK ] election.tryRunoff_4 (15 ms)
+[ RUN      ] election.outputTieCands_1
+[       OK ] election.outputTieCands_1 (27 ms)
+[ RUN      ] election.outputTieCands_2
+[       OK ] election.outputTieCands_2 (24 ms)
+[ RUN      ] election.outputTieCands_3
+[       OK ] election.outputTieCands_3 (23 ms)
+[ RUN      ] election.eval_1
+[       OK ] election.eval_1 (19 ms)
+[ RUN      ] election.eval_2
+[       OK ] election.eval_2 (11 ms)
+[ RUN      ] election.eval_3
+[       OK ] election.eval_3 (11 ms)
+[ RUN      ] election.eval_4
+[       OK ] election.eval_4 (14 ms)
+[ RUN      ] election.eval_5
+[       OK ] election.eval_5 (12 ms)
+[ RUN      ] election.eval_6
+[       OK ] election.eval_6 (12 ms)
+[----------] 26 tests from election (452 ms total)
+
+[----------] 3 tests from voting
+[ RUN      ] voting.eval_1
+[       OK ] voting.eval_1 (15 ms)
+[ RUN      ] voting.eval_2
+[       OK ] voting.eval_2 (12 ms)
+[ RUN      ] voting.eval_3
+[       OK ] voting.eval_3 (15 ms)
+[----------] 3 tests from voting (43 ms total)
+
+[----------] Global test environment tear-down
+[==========] 55 tests from 4 test cases ran. (963 ms total)
+[  PASSED  ] 55 tests.
