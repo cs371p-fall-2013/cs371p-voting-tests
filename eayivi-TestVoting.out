@@ -1,0 +1,45 @@
+Running main() from gtest_main.cc
+[==========] Running 18 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 18 tests from Voting
+[ RUN      ] Voting.read_0
+[       OK ] Voting.read_0 (66 ms)
+[ RUN      ] Voting.read_1
+[       OK ] Voting.read_1 (8 ms)
+[ RUN      ] Voting.read_2
+[       OK ] Voting.read_2 (7 ms)
+[ RUN      ] Voting.read_3
+[       OK ] Voting.read_3 (8 ms)
+[ RUN      ] Voting.read_4
+[       OK ] Voting.read_4 (8 ms)
+[ RUN      ] Voting.read_5
+[       OK ] Voting.read_5 (7 ms)
+[ RUN      ] Voting.solve_0
+[       OK ] Voting.solve_0 (109 ms)
+[ RUN      ] Voting.solve_1
+[       OK ] Voting.solve_1 (69 ms)
+[ RUN      ] Voting.solve_2
+[       OK ] Voting.solve_2 (75 ms)
+[ RUN      ] Voting.solve_3
+[       OK ] Voting.solve_3 (79 ms)
+[ RUN      ] Voting.solve_4
+[       OK ] Voting.solve_4 (95 ms)
+[ RUN      ] Voting.solve_multiple_elections
+[       OK ] Voting.solve_multiple_elections (93 ms)
+[ RUN      ] Voting.voting_solve_normal
+[       OK ] Voting.voting_solve_normal (63 ms)
+[ RUN      ] Voting.voting_solve_recount
+[       OK ] Voting.voting_solve_recount (80 ms)
+[ RUN      ] Voting.voting_solve_tie
+[       OK ] Voting.voting_solve_tie (64 ms)
+[ RUN      ] Voting.voting_solve_two_vote
+[       OK ] Voting.voting_solve_two_vote (62 ms)
+[ RUN      ] Voting.voting_solve_long_case
+[       OK ] Voting.voting_solve_long_case (68 ms)
+[ RUN      ] Voting.voting_solve_another_long_case
+[       OK ] Voting.voting_solve_another_long_case (64 ms)
+[----------] 18 tests from Voting (1047 ms total)
+
+[----------] Global test environment tear-down
+[==========] 18 tests from 1 test case ran. (1090 ms total)
+[  PASSED  ] 18 tests.
